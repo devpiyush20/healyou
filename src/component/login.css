@@ -1,0 +1,77 @@
+.main{
+    margin-top: 50px;
+display: flex;
+flex-wrap: wrap;
+column-gap: 500px;
+row-gap: 100px;
+}
+
+.p1{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(217, 217, 217, 0.1);
+    padding: 20px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+.login input{
+    background: rgba(217, 217, 217, 0.2);
+    width: 322px;
+height: 52px;
+border-radius: 25px;
+outline: none;
+padding: 5px;
+color: white;
+}
+.login .btn{
+    color: white;
+    width: 322px;
+
+}
+.login .btn:hover{
+    color: black;
+}
+.doc{
+    width: 300px;
+height: 300px;
+margin-top: 100px;
+margin-left: 100px;
+}
+.logoo{
+    width: 100px;
+height: 100px;
+}
+.lg{
+    text-align: center;
+    background: #40D06D;
+    border-radius: 25px 25px 0px 0px;
+}
+.lwg{
+    display: flex;
+    flex-direction: row;
+    column-gap: 8px;
+
+}
+.glogin{
+    width: 25px;
+height: 25px;
+}
+.p2{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    background: rgba(217, 217, 217, 0.1);
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 25px 25px;
+}
+.su{
+    color: #40D06D;
+}
