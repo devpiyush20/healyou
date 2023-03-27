@@ -1,0 +1,73 @@
+.main{
+    margin-top: 150px;
+display: flex;
+flex-wrap: wrap;
+column-gap: 300px;
+row-gap: 100px;
+align-items: center;
+justify-content: center;
+
+}
+.rg{
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+    justify-content: center;
+    align-items: center;
+    background: rgba(217, 217, 217, 0.1);
+    padding: 20px;
+   border-radius: 25px;
+    overflow: hidden;
+}
+.rg input{
+    background: rgba(217, 217, 217, 0.2);
+    width: 400px;
+height: 52px;
+border-radius: 25px;
+outline: none;
+padding: 8px;
+color: white;
+font-size: 19px;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    column-gap: 6px;
+    justify-content: center;
+    align-items: center;
+}
+.name input{
+    width: 200px;
+}
+.top{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    margin-left: -25px;
+    z-index: 10;
+    padding: 5px;
+    
+}
+.top img{
+    width: 60px;
+    height: 60px;
+}
+.rgt{
+    background-color: #40D06D;
+    padding: 5px 80px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 10px;
+}
+.btnn{
+    background-color: #40D06D;
+    width: 400px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+}

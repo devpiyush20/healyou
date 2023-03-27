@@ -1,9 +1,11 @@
 .main{
-    margin-top: 50px;
+    margin-top: 0px;
 display: flex;
 flex-wrap: wrap;
-column-gap: 500px;
+column-gap: 300px;
 row-gap: 100px;
+align-items: center;
+justify-content: center;
 }
 
 .p1{
@@ -26,8 +28,9 @@ row-gap: 100px;
 height: 52px;
 border-radius: 25px;
 outline: none;
-padding: 5px;
+padding: 8px;
 color: white;
+font-size: 19px;
 }
 .login .btn{
     color: white;
