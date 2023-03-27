@@ -19,7 +19,7 @@ nav.navbar .navbar-nav .nav-link.navbar-link{
     letter-spacing: 0.8px;
     padding: 0 25px;
     font-size: 18px;
-    margin-top: 18px;
+    /* margin-top: 18px; */
     position: relative;
   
 }

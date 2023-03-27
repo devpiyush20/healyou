@@ -1,6 +1,8 @@
-.main{
+.mainn{
     display: flex;
     flex-direction: row;
+    margin-top: 100px;
+    column-gap: 200px   ;
 }
 
 .catalog{
