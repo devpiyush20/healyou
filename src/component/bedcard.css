@@ -1,0 +1,33 @@
+.bed-card{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+   margin-bottom: 20px;
+    background-color: #403e3ec8;
+    height: 80px;
+    padding: 25px 48px;
+    width: 410px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.beds{
+    height: 30px;
+    width: 50px;
+    border-radius: 12px;
+    padding: 4px 12px;
+    background-color: #40D06D;
+}
+.book-appointment{
+    margin-top: 15px;
+    border-radius: 15px;
+    width: 160px;
+    padding: 8px 6px;
+    height: 40px;
+    background-color: #40D06D;
+}
+.book-bed{
+    background-color: #40D06D;
+    padding: 4px 5px;
+    border-radius: 8px;
+}
