@@ -19,8 +19,8 @@ history.push('/bookappointment')
             <p>{address}
             </p>
             <div className="btns">
-                <div className="btn" onClick={()=>{handleClick2}}>BookBed</div>
-                <div className="btn" onClick={()=>{handleClick1}}>Book Appointment</div>
+                <div className="btn" onClick={()=>{handleClick2()}}>BookBed</div>
+                <div className="btn" onClick={()=>{handleClick1()}}>Book Appointment</div>
             </div>
         </div>
     </div>
