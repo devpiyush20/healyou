@@ -1,0 +1,114 @@
+.logo {
+  height: 60px;
+  width: auto;
+}
+.nav {
+  width: 100%;
+  border-bottom: solid;
+  border-color: rgb(8, 25, 31);
+  border-width: 1px;
+  padding: 8px;
+  box-shadow: 2px 4px 7px rgb(8, 25, 31);
+  position: fixed;
+  z-index: 999;
+  background-color: #0c242c;
+  align-items: center;
+  display: flex;
+}
+.button {
+  font-family: 'Centra', sans-serif;
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  position: relative;
+  margin-left: 15px;
+}
+.button2 {
+  font-family: 'Centra', sans-serif;
+  padding: 7px 30px;
+  font-size: 20px;
+  border: solid;
+  border-color: white;
+  background-color: #0c242c;
+  color: white;
+  border-width: 1px;
+  position: absolute;
+  transition: color 0.3s;
+  transition: background-color 0.3s;
+  right: 150px;
+  margin-right: 10px;
+}
+.button3 {
+  font-family: 'Centra', sans-serif;
+  padding: 7px 30px;
+  font-size: 20px;
+  border: solid;
+  border-color: white;
+  background-color: #0c242c;
+  color: white;
+  border-width: 1px;
+  position: absolute;
+  transition: color 0.3s;
+  transition: background-color 0.3s;
+  right: 0;
+  margin-right: 10px;
+}
+.button2:hover {
+  color: #121212;
+  background-color: #fff;
+}
+.button3:hover {
+  color: #121212;
+  background-color: #fff;
+}
+.logo {
+  background-color: transparent;
+  border: none;
+}
+.menuicon {
+  height: 60px;
+  width: auto;
+  color: white;
+  font-size: 30px;
+}
+.active {
+  left: 0;
+}
+li {
+  list-style: none;
+}
+.navmenu2 {
+  display: none;
+  justify-content: space-between;
+  gap: 60px;
+}
+@media (max-width: 800px) {
+  .navmenu2 {
+    display: flex;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    gap: 5px;
+    flex-direction: column;
+    background-color: #0c242c;
+    width: 100%;
+    transition: 0.5s;
+    height: fit-content;
+    box-shadow: 2px 4px 7px rgb(8, 25, 31);
+    padding-bottom: 10px;
+  }
+  .navmenu2.active {
+    top: 76px;
+  }
+  .button2,
+  .button3 {
+    position: relative;
+    right: auto;
+    left: 10px;
+  }
+  .button {
+    padding-left: 0;
+  }
+}
