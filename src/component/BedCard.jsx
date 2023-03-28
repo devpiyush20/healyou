@@ -8,9 +8,8 @@ const BedCard = ({roomcond,type,availablebeds}) => {
         <span className='beds'>
           {availablebeds}
         </span> 
-        <div className="book-bed">
-            Book Bed
-        </div>
+       <span className="book-bed"> Book-Bed</span>  
+        
         </div>  
     </>
   )

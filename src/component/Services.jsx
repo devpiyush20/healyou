@@ -71,13 +71,13 @@ const Services = () => {
   return (
     <>
      <div className="about">
-    
-     <img src={logo} alt="" />
-     <div>
+      <div className="review">
+      <img src={logo} alt="" />
      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam, tempora adipisci magnam voluptate dolore. Praesentium a tempore error consectetur officiis rem iure! Explicabo, fuga iusto culpa maiores iste repellendus!</p>
      <span className="continue-button"> <img src={arrow1} alt="arrow1" /> Customer Review <img src={arrow2} alt="arrow2" /> </span>
      </div>
-     </div>
+      </div>
+    
             <div className="spec-bed-books">
             <div className="specialization">
           <div className='drpdwn1'

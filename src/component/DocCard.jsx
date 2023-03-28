@@ -8,7 +8,7 @@ const DocCard = ({doc,college,specialization}) => {
         <img src={ellipse} alt="ellipse" /> 
         <span>
         <h6> {doc}</h6>
-        <h8>{college}</h8>
+        <h8>{specialization}</h8>
         </span> 
         <div className="book-appointment">
             Book Appointment
