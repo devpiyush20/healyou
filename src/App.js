@@ -10,6 +10,7 @@ import BookForm from './component/BookForm';
 import BedForm from './component/BedForm';
 import Services from './component/Services';
 import Map from './component/Map';
+import Doc from './component/Doc';
 
 function App() {
   return (
@@ -46,6 +47,9 @@ function App() {
              </Route>
              <Route exact path='/map' >
     <Map/>
+             </Route>
+             <Route exact path='/doc'>
+    <Doc/>
              </Route>
 
 
