@@ -18,14 +18,18 @@ const getLocation = () => {
     }
     const options = {
         method: 'GET',
-        url: 'https://nearby-places.p.rapidapi.com/v2/nearby',
-        params: {lat: lat, lng: lng, type: 'hospital', radius: '50000'},
+        url: 'https://trueway-places.p.rapidapi.com/FindPlacesNearby',
+        params: {
+          location: `${lat},${lng}`,
+          type: 'hospital',
+          radius: '10000',
+          language: 'en'
+        },
         headers: {
           'X-RapidAPI-Key': '9607c816a3msh2cc69ecac3742a2p16ab26jsn5305753fd6d1',
-          'X-RapidAPI-Host': 'nearby-places.p.rapidapi.com'
+          'X-RapidAPI-Host': 'trueway-places.p.rapidapi.com'
         }
       };
-      console.log(options)
       
       axios.request(options).then(function (response) {
           console.log(response.data);
