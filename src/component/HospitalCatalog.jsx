@@ -21,7 +21,7 @@ const getLocation = () => {
         url: 'https://nearby-places.p.rapidapi.com/v2/nearby',
         params: {lat: lat, lng: lng, type: 'hospital', radius: '50000'},
         headers: {
-          'X-RapidAPI-Key': '9079f6ddbemsha3fe70229d3f47cp108909jsn0077a9ddd1da',
+          'X-RapidAPI-Key': '9607c816a3msh2cc69ecac3742a2p16ab26jsn5305753fd6d1',
           'X-RapidAPI-Host': 'nearby-places.p.rapidapi.com'
         }
       };
