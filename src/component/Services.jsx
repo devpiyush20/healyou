@@ -1,17 +1,15 @@
-import React,{useState} from 'react'
+import React from 'react'
 import logo from '../image/reactangle.png'
 import arrow1 from '../image/arrow1.png'
 import arrow2 from '../image/arrow2.png'
 import './services.css'
-import {BsFillCaretDownFill,BsFillCaretUpFill} from "react-icons/bs"
 import DocCard from './DocCard'
 import BedCard from './BedCard'
 
 
  
 const Services = () => {
-  const[drpdown,setDrpdwn]=useState(false);
-  const[drpdown1,setDrpdwn1]=useState(false);
+
   const docData=[
     {
       doc:"Dr. Raghav",

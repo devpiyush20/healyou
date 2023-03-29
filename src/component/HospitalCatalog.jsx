@@ -1,46 +1,47 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
 import Catlog from './Catlog'
 const HospitalCatalog = () => {
-    const data = [
-        {
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },
-        {
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },{
-            title:"lorem",
-            address:"Lorem ipsum dolor, sit amuaerat distinctio quis quos est sequi dolorum illo"
-        },
+    const [lat, setLat] = useState(null);
+const [lng, setLng] = useState(null);
+
+const [data, setData] = useState(null);
+
+const getLocation = () => {
+    if (!navigator.geolocation) {
+    } else {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setLat(position.coords.latitude);
+        setLng(position.coords.longitude);
+      }, () => {
+      });
+    }
+    const options = {
+        method: 'GET',
+        url: 'https://nearby-places.p.rapidapi.com/v2/nearby',
+        params: {lat: lat, lng: lng, type: 'hospital', radius: '50000'},
+        headers: {
+          'X-RapidAPI-Key': '9079f6ddbemsha3fe70229d3f47cp108909jsn0077a9ddd1da',
+          'X-RapidAPI-Host': 'nearby-places.p.rapidapi.com'
+        }
+      };
+      console.log(options)
+      
+      axios.request(options).then(function (response) {
+          console.log(response.data);
+          setData(response.data.results)
+      }).catch(function (error) {
+          console.error(error);
+      });
+  }
+   
     
-    ]
+   
   return (
     <>
+    <div className="btn" onClick={()=>{getLocation()}}>
+        click
+    </div>
     <Catlog data = {data} title ="Hospital Near You"/>
     </>
   )
