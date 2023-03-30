@@ -12,14 +12,14 @@ import Services from './component/Services';
 import Map from './component/Map';
 import Doc from './component/Doc';
 import Vcall from './component/Vcall';
-
+import NavBar2 from './component/Navbar2';
 function App() {
   return (
     <>
                 <Switch>
 <React.Fragment>
-   {/* <NavBar/> */}
              <Route exact path='/' >
+   <NavBar2/>
 
    <Banner/>
              </Route>
