@@ -1,8 +1,10 @@
 .mainn{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     margin-top: 100px;
-    column-gap: 200px   ;
+    column-gap: 200px;
+    row-gap: 100px;
+    align-items: center;
 }
 
 .catalog{
@@ -10,15 +12,12 @@
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 20px;
-    position: absolute;
-    right: 0px;
     justify-content: flex-end;
     align-items: center;
     padding: 20px;
 
 }
 .r-options{
-    margin-top: 50px;
 display: flex;
 flex-direction: column;
 row-gap: 20px;

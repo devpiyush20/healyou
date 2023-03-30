@@ -21,7 +21,7 @@ const Register = () => {
              <input type="password" name="cpass" placeholder='Confirm Password' />
              <div className="btnn"><h5>SignUp</h5></div>
         </div>
-        <img src={doc} alt="" />
+        <img src={doc} alt="" className='doc'/>
     </div>
     </>
   )

@@ -19,7 +19,7 @@
 .content{
     display: flex;
     flex-direction: column;
-    row-gap: 0px;
+    row-gap: 5px;
     font-size: 13px;
 }
 .btns{
@@ -37,10 +37,19 @@
     padding: 10px;
 font-size: 12px;
 border-radius: 25px;
-
 text-align: center;
 }
 .btn:hover{
     background-color: white;
     color: black;
+}
+@media screen and (max-width:400px) {
+    .card{
+        width: 300px;
+        padding: 10px;
+    }
+    .card img{
+        width: 70px;
+        height: 80px;
+    }
 }
