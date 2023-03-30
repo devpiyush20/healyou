@@ -11,6 +11,7 @@ import BedForm from './component/BedForm';
 import Services from './component/Services';
 import Map from './component/Map';
 import Doc from './component/Doc';
+import Vcall from './component/Vcall';
 
 function App() {
   return (
@@ -50,6 +51,9 @@ function App() {
              </Route>
              <Route exact path='/doc'>
     <Doc/>
+             </Route>
+             <Route exact path='/vcall'>
+    <Vcall/>
              </Route>
 
 

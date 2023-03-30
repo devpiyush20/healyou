@@ -21,7 +21,7 @@ const getLocation = () => {
         url: 'https://trueway-places.p.rapidapi.com/FindPlacesNearby',
         params: {
           location: `${lat},${lng}`,
-          type: 'hospital',
+          type: 'doctor',
           radius: '10000',
           language: 'en'
         },
