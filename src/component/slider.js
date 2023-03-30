@@ -53,7 +53,7 @@ function Slider() {
       }
     >
       {slid.map((slide) => (
-        <Carousel.Item key={slide.image} interval={slide.interval}>
+        <Carousel.Item key={slide.imag} interval={slide.interval}>
           <img className='d-block w-100' src={slide.imag} alt='First slide' />
           <Carousel.Caption>
             <h3>{slide.title}</h3>
