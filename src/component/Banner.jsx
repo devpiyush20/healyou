@@ -1,13 +1,9 @@
 import React from 'react'
 import './Banner.css'
 import { MdOutlineHomeRepairService } from 'react-icons/md'
-import { GrMapLocation } from 'react-icons/gr'
-import { Carousel } from 'react-bootstrap'
-import Location from './Location'
-import slide1 from '../image/slide1.png'
-import slide2 from '../image/slide2.png'
-import slide3 from '../image/slide3.png'
-import slide4 from '../image/slide4.png'
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Slider from './slider'
 
 const Banner = () => {
   return (
@@ -40,64 +36,10 @@ const Banner = () => {
             <option value='Online Consultation'>Online Consultation</option>
           </select>
 
-          <GrMapLocation size={35} className='mapicon icon' />
-          <Location />
           <button className='go'>Go</button>
         </div>
         <div className='carousel'>
-          <Carousel>
-            <Carousel.Item>
-              <img
-                className='d-block w-100 h-100'
-                src={slide1}
-                alt='First slide'
-              />
-              {/* <Carousel.Caption>
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </Carousel.Caption> */}
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className='d-block w-100 h-100'
-                src={slide2}
-                alt='Second slide'
-              />
-
-              {/* <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption> */}
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className='d-block w-100 h-100'
-                src={slide3}
-                alt='Third slide'
-              />
-
-              {/* <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption> */}
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className='d-block w-100 h-100'
-                src={slide4}
-                alt='Four slide'
-              />
-
-              {/* <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption> */}
-            </Carousel.Item>
-          </Carousel>
+          <Slider />
         </div>
       </div>
     </article>

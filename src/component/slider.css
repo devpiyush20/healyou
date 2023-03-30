@@ -1,0 +1,5 @@
+.carousel .carousel-indicators button {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+}

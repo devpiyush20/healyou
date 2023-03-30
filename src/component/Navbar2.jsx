@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import logo from '../image/logo.png'
 import './Navbar2.css'
 import { Navmenu, Navbutton } from './NavBar'
