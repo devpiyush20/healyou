@@ -5,26 +5,31 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+html {
   scroll-behavior: smooth;
   scroll-padding-top: 75px;
 }
 
-body{
-font-weight: 400;
-overflow-x: hidden;
-position: relative;
-background-color: #0C242C !important;
-color: #fff !important;
-font-family: 'Centra',sans-serif !important;
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #0c242c !important;
+  color: #fff !important;
+  font-family: 'Centra', sans-serif !important;
+  padding-bottom: 100px;
 }
 
-
-h1, h2 ,h3,h4,h5,h6{
-margin: 0;padding: 0;
-line-height: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
-
 
 /*custom fonts*/
 @font-face {
@@ -42,4 +47,3 @@ line-height: normal;
   src: url('../src/font/CentraNo2-Book.ttf');
   font-weight: 400;
 }
-
