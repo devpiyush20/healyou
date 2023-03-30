@@ -1,0 +1,64 @@
+.logo{
+    height: 40px;
+    width: 90px;
+    
+}
+
+
+nav.navbar{
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 9999;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link{
+    font-weight: 400;
+    color: #fff ;
+    letter-spacing: 0.8px;
+    padding: 0 25px;
+    font-size: 18px;
+    /* margin-top: 18px; */
+    position: relative;
+  
+}
+span.navbar-text{
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+
+}
+
+.navbar-text button{
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 34px;
+    font-size: 18px;
+    margin-left: 18px;
+    position: relative;
+    background-color: transparent;
+}
+
+.navbar-text button:hover{
+    color: #121212;
+    background-color: #fff;
+}
+
+.navbar-toggler-icon{
+    filter: invert(1);
+}
+
+
+@media only screen and (max-width: 600px){
+
+    span.navbar-text{
+    margin-left: 0;
+
+}
+
+.logo{
+    margin-left: 20px;
+}
+}

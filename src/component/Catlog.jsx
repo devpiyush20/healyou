@@ -4,7 +4,7 @@ import './catalog.css'
 import loc from '../image/loc.png'
 const Catlog = ({data, title}) => {
   return (
-    <div className='main'>
+    <div className='mainn'>
     <div className='r-options'>
         <div className="op1"><h3>{title}</h3></div>
         <div className="loc">
@@ -14,7 +14,7 @@ const Catlog = ({data, title}) => {
     </div>
     <div className="catalog">
     {data&&data.map((e)=>{
-        return <Card title={e.title} address={e.address}/>
+        return <Card title={e.name} address={e.address}/>
     })}
     </div>
     </div>
