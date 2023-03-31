@@ -9,7 +9,7 @@
   border-width: 1px;
   padding: 8px;
   box-shadow: 2px 4px 7px rgb(8, 25, 31);
-  position: fixed;
+  /* position: fixed; */
   z-index: 999;
   background-color: #0c242c;
   align-items: center;
@@ -84,6 +84,11 @@ li {
   justify-content: space-between;
   gap: 60px;
 }
+.us{
+  width: 50px;
+  position: absolute;
+  right: 30px;
+}
 @media (max-width: 800px) {
   .navmenu2 {
     display: flex;
@@ -101,6 +106,9 @@ li {
   }
   .navmenu2.active {
     top: 76px;
+  }
+  .navmenu2.inactive {
+    top: -100%;
   }
   .button2,
   .button3 {

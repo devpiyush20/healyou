@@ -3,7 +3,12 @@ import logo from "../image/logoo.png"
 
 import af from "../image/addfile.png"
 import "./bookform.css"
+import { useHistory } from 'react-router-dom'
 const BookForm = () => {
+  const history = useHistory();
+  const handleClick=()=>{
+    history.push('/')
+      }
   return (
     <div className='mn'>
     <div className="f-main">
@@ -17,7 +22,7 @@ const BookForm = () => {
             <h6>Upload your reports</h6>
         </div>
         <input type="file" name="report" placeholder='Your Reports' className='fi'/>
-        <div className="sb">Submit</div>
+        <div className="sb"  onClick={()=>{handleClick()}}>Submit</div>
     </div>
     </div>
   )

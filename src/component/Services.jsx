@@ -104,6 +104,10 @@ const Services = () => {
      <p>{rw}</p>
      <span className="continue-button"> <img src={arrow1} alt="arrow1" onClick={()=>{prev()}}/> Customer Review <img src={arrow2} alt="arrow2"  onClick={()=>{next()}}/> </span>
      </div>
+     <a href="https://www.google.com/maps/place/Swaroop+Rani+Nehru+Hospital/@25.4461738,81.8420723,17z/data=!4m6!3m5!1s0x399acab7d1b7e431:0xe418877386cc0ecc!8m2!3d25.4461738!4d81.8442664!16s%2Fg%2F1tdhcf4p" target="_blank">
+
+     <div className="btn">Show Directions</div>
+     </a>
       </div>
     
             <div className="spec-bed-books">

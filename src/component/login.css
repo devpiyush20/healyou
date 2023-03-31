@@ -5,6 +5,7 @@ column-gap: 300px;
 row-gap: 100px;
 align-items: center;
 justify-content: center;
+margin-top: 0px;
 }
 
 .p1{
@@ -74,6 +75,10 @@ height: 25px;
     justify-content: center;
     border-radius: 0px 0px 25px 25px;
 }
+.gb{
+    position: absolute;
+    opacity: 0;
+}
 .su{
     color: #40D06D;
 }
@@ -88,7 +93,5 @@ height: 25px;
         width: 250px;
     
     }
-    .rop{
-        margin-top: -100px;
-    }
+    
 }

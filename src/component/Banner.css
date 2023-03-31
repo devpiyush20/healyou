@@ -10,7 +10,7 @@
   flex-direction: column;
   flex: 1;
   flex-wrap: wrap;
-  margin-top: 15%;
+  margin-top: 5%;
   justify-content: center;
   align-items: center;
   min-width: 350px;
@@ -43,6 +43,8 @@
 }
 
 .searchBox {
+  opacity: 0;
+
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -51,7 +53,7 @@
   padding: 10px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .icon {
@@ -122,7 +124,7 @@
 }
 .rightSection {
   flex: 1;
-  margin-top: 15%;
+  margin-top: 5%;
   margin-right: 20px;
   margin-left: 20px;
 }

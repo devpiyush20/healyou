@@ -14,7 +14,7 @@ const Catlog = ({data, title}) => {
     </div>
     <div className="catalog">
     {data&&data.map((e)=>{
-        return <Card title={e.name} address={e.address}/>
+        return <Card title={e.name} address={e.address} key={e.name}/>
     })}
     </div>
     </div>

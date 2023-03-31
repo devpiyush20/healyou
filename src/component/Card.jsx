@@ -5,7 +5,7 @@ import './card.css'
 const Card = ({title, address}) => {
   const history = useHistory();
   const handleClick1=()=>{
-history.push('/bookappointment')
+history.push('/services')
   }
   const handleClick2=()=>{
     history.push('/bookbed')
@@ -20,7 +20,7 @@ history.push('/bookappointment')
             </p>
             <div className="btns">
                 <div className="btn" onClick={()=>{handleClick2()}}>Book Bed</div>
-                <div className="btn" onClick={()=>{handleClick1()}}>Book Appointment</div>
+                <div className="btn" onClick={()=>{handleClick1()}}>View More</div>
             </div>
         </div>
     </div>

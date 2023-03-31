@@ -21,7 +21,7 @@
 .book-bed{
     background-color: #40D06D;
      padding: 3px 4px;
-    
+    cursor: pointer;
     border-radius: 8px;
   
 }

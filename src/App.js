@@ -18,8 +18,8 @@ function App() {
     <>
                 <Switch>
 <React.Fragment>
-             <Route exact path='/' >
    <NavBar2/>
+             <Route exact path='/' >
 
    <Banner/>
              </Route>
