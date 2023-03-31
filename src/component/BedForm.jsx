@@ -10,6 +10,8 @@ const BedForm = () => {
   const history = useHistory();
 
   const handleClick=()=>{
+    window.alert("Bed booked successfully")
+
     history.push('/')
       }
   const user = JSON.parse(localStorage.getItem("user"))
@@ -50,10 +52,7 @@ dispatch(bookbed({formValue, history}));
         <div className="f-main">
             <h4>Have Patience</h4>
         <img src={logo} alt="logo" />
-        <div className="fk">
-        <img src={ai} alt="" />
-            <h6>Upload an image of Aadhar</h6>
-        </div>
+       <label htmlFor="adhar">Upload Adhar Image</label>
             <input type="file" name="adhar" className='fi'  id='fi' onChange={()=>{
               imageUploaded()
               // console.log(document.getElementById("fi").value)

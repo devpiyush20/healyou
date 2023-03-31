@@ -14,7 +14,8 @@ const Services = () => {
     "Lorem raghav ipsum dolor sit amet consectetur adipisicing elit. Quae molestiae impedit dignissimos quisquam culpa eius assumenda ut sapiente, pariatur debitis sequi eum adipisci dolor voluptatibus numquam ab maxime placeat aliquam",
     "Lorem piyush dolor sit amet consectetur adipisicing elit. Quae molestiae impedit dignissimos quisquam culpa eius assumenda ut sapiente, pariatur debitis sequi eum adipisci dolor voluptatibus numquam ab maxime placeat aliquam",
     "Lorem neel dolor sit amet consectetur adipisicing elit. Quae molestiae impedit dignissimos quisquam culpa eius assumenda ut sapiente, pariatur debitis sequi eum adipisci dolor voluptatibus numquam ab maxime placeat aliquam",
-    "mera dengu hua is app se"
+    "mera dengu theek hua is app se",
+    "mukesh ka cancer theek hua"
   ]
   const [idx,setIdx]=useState(0);
   const [rw,setRw]=useState(reviews[idx]);
@@ -22,27 +23,27 @@ const Services = () => {
   const docData=[
     {
       doc:"Dr. Raghav",
-      specialization:"Cnacer",
+      specialization:"cancer",
        college:"IERT MED"
     },
     {
       doc:"Dr. Raghav",
-      specialization:"Cnacer",
+      specialization:"cancer",
        college:"IERT MED"
     },
     {
       doc:"Dr. Raghav",
-      specialization:"Cnacer",
+      specialization:"cancer",
        college:"IERT MED"
     },
     {
       doc:"Dr. Raghav",
-      specialization:"Cnacer",
+      specialization:"cancer",
        college:"IERT MED"
     },
     {
       doc:"Dr. Raghav",
-      specialization:"Cnacer",
+      specialization:"cancer",
        college:"IERT MED"
     }
   ]

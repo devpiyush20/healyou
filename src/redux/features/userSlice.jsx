@@ -51,8 +51,8 @@ export const glogin  = createAsyncThunk("auth/glogin", async ({formValue, histor
 
 
 export const logout  = createAsyncThunk("auth/logout", async ({history})=>{
-    history.push('/logreg')
-    window.location.reload(false)
+    history.push('/login')
+    localStorage.clear()
 })
 const userSlice = createSlice({
     name :  "user",
@@ -115,6 +115,8 @@ const userSlice = createSlice({
             state.loading = false;
             localStorage.setItem("user", JSON.stringify({...action.payload}));
             state.user = action.payload;
+            state.status=true;
+
         },
         [glogin.rejected]:(state,action)=>
         {
@@ -125,15 +127,19 @@ const userSlice = createSlice({
         [logout.pending]:(state,action)=>
         {
             state.loading = true;
+
         },
         [logout.fulfilled]:(state,action)=>
         {
             state.loading = false;
             state.user = null;
+            state.status=false;
         },
         [logout.rejected]:(state,action)=>
         {
             state.loading = false;
+            state.status=true;
+
         },
      }
 })

@@ -5,77 +5,77 @@ const Doc = () => {
     const docData=[
         {
           doc:"Dr. Raghav",
-          specialization:"Cnacer",
+          specialization:"cancer",
            college:"IERT MED"
         },
         {
           doc:"Dr. Raghav",
-          specialization:"Cnacer",
+          specialization:"cancer",
            college:"IERT MED"
         },
         {
           doc:"Dr. Raghav",
-          specialization:"Cnacer",
+          specialization:"cancer",
            college:"IERT MED"
         },
         {
           doc:"Dr. Raghav",
-          specialization:"Cnacer",
+          specialization:"cancer",
            college:"IERT MED"
         },
         {
           doc:"Dr. Raghav",
-          specialization:"Cnacer",
+          specialization:"cancer",
            college:"IERT MED"
         },
         {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           },
           {
             doc:"Dr. Raghav",
-            specialization:"Cnacer",
+            specialization:"cancer",
              college:"IERT MED"
           }
       ]

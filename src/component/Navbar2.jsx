@@ -3,11 +3,12 @@ import logo from '../image/logo.png'
 import './Navbar2.css'
 import { Navmenu, Navbutton } from './NavBar'
 import us from "../image/us.png"
-import { useSelector } from 'react-redux'
-import  {Link} from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import  {Link, useHistory} from 'react-router-dom'
+import { logout } from '../redux/features/userSlice'
 
 const displaymenu = () => {
-
+  
   const navmenu = document.querySelector('.navmenu2')
   navmenu.classList.remove("inactive")
   navmenu.classList.toggle('active')
@@ -21,13 +22,18 @@ const hide=()=>{
 
 }
 function Navbar2() {
+  const dispatch = useDispatch()
+  const history =  useHistory()
+  const logOut=()=>{
+dispatch(logout({history}))
+  }
   const {status} = useSelector((state)=>({...state.user}))
   const user2 = JSON.parse(localStorage.getItem("user"))
   const [isLog, setIslog]=useState(status||user2?.name)
   useEffect(()=>{
-    if(status){
-      setIslog(true);
-    }
+    
+      setIslog(status);
+    
   },[status,isLog])
   return (
     <div id='nav' className='nav'>
@@ -69,7 +75,11 @@ function Navbar2() {
         </Link>
           </>
         :
+        <>
         <img src={us} alt="" className='us'/>
+        <button className='button2' onClick={logOut}>Log Out</button>
+        </>
+
         }
       </Navmenu>
       <ul id='navmenu2' className='navmenu2'>
@@ -116,7 +126,13 @@ function Navbar2() {
         <button className='button3'  onClick={hide}>Signup</button>
         </Link>        </li>
         </>:
+        <>
+        <li>
+
+                <button className='button2'  onClick={logOut}>Log Out</button>
+        </li>
                 <img src={us} alt="" className='us'/>
+        </>
 
         }
         

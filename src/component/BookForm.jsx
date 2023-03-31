@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom'
 const BookForm = () => {
   const history = useHistory();
   const handleClick=()=>{
+    window.alert("Appointment Booked! Check your mail for further details ✅")
     history.push('/')
       }
   return (
@@ -17,10 +18,8 @@ const BookForm = () => {
         <input type="text" name="name" placeholder='Enter Your Name' />
         <input type="tel" name="tel" placeholder='Enter Your Phone No' />
         <input type="email" name="email" placeholder='Your Email'/>
-        <div className="fk">
-        <img src={af} alt="" />
-            <h6>Upload your reports</h6>
-        </div>
+        
+        <label htmlFor="report"> Upload Your reports</label>
         <input type="file" name="report" placeholder='Your Reports' className='fi'/>
         <div className="sb"  onClick={()=>{handleClick()}}>Submit</div>
     </div>

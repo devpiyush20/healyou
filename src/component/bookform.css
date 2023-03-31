@@ -7,7 +7,7 @@
 .f-main{
     display: inline-flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 6px;
     justify-content: center;
     align-items: center;
     background-color: rgba(217, 217, 217, 0.1);
@@ -39,8 +39,8 @@ justify-content: flex-start;
 padding: 10px;
 }
 .fi{
-    margin-top: -62px;
-    opacity: 0;
+    /* margin-top: -62px; */
+    /* opacity: 0; */
 }
 .fk img{
     width: 30px;
