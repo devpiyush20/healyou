@@ -1,0 +1,43 @@
+.card-ap{
+    display: inline-flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #403e3ec8;
+    border-radius: 10px;
+    text-align: justify;
+}
+.info{
+    display: inline-flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 5px;
+}
+.upc{
+    background-color: rgba(0, 0, 0, 0.542);
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+.main-d{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.mnd{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

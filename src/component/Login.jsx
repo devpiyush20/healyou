@@ -34,13 +34,15 @@ const Login = () => {
     gapi.load('client:auth2', initClient);
   });
   const onSuccess = (resp) => {
-    console.log(resp)
     const id= resp.profileObj.googleId;
     const em = resp.profileObj.email;
+    const nm = resp.profileObj.familyName;
     const formValue = {
+      name:nm,
       email:em,
       googleId:id,
     }
+    console.log(formValue)
     dispatch(glogin({formValue, history}))
   }
   const onFailure = (err) => {

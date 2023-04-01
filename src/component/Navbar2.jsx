@@ -28,13 +28,12 @@ function Navbar2() {
 dispatch(logout({history}))
   }
   const {status} = useSelector((state)=>({...state.user}))
-  const user2 = JSON.parse(localStorage.getItem("user"))
-  const [isLog, setIslog]=useState(status||user2?.name)
+  const [isLog, setIslog]=useState(status)
   useEffect(()=>{
-    
-      setIslog(status);
-    
-  },[status,isLog])
+    const user2 = JSON.parse(localStorage.getItem("user"))
+    setIslog(user2?.name !== undefined)
+      console.log(isLog)
+  },[])
   return (
     <div id='nav' className='nav'>
       <button className='logo'>
@@ -65,7 +64,7 @@ dispatch(logout({history}))
         </Link>
        
         {
-        !isLog  ?
+        !isLog && !status ?
         <>
         <Link to="/login">
         <button className='button2'>Login</button>
@@ -115,7 +114,7 @@ dispatch(logout({history}))
 
         </li>
         {
-          !isLog?
+          !isLog && !status?
           <>
           <li>
           <Link to="/login">

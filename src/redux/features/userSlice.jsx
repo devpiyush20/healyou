@@ -32,7 +32,6 @@ export const bookbed  = createAsyncThunk("auth/bed", async ({formValue, history}
     try {
         const response = await api.bookbed(formValue);
         history.push("/");
-        // window.alert("SuceesFully Regitered")
         return response.data;
     } catch (error) {
        console.log(error) 
@@ -47,6 +46,17 @@ export const glogin  = createAsyncThunk("auth/glogin", async ({formValue, histor
     } catch (error) {
        console.log(error) 
     }
+})
+export const bookappointment = createAsyncThunk("/bookappointment", async({formValue, history})=>
+{
+try {
+    const res = await api.bookappointment(formValue)
+    history.push("/")
+    return res.data
+} catch (error) {
+    console.log(error) 
+
+}
 })
 
 
@@ -140,6 +150,36 @@ const userSlice = createSlice({
             state.loading = false;
             state.status=true;
 
+        },
+        [bookbed.pending]:(state,action)=>
+        {
+            state.loading = true;
+
+        },
+        [bookbed.fulfilled]:(state,action)=>
+        {
+            state.loading = false;
+            localStorage.setItem("user", JSON.stringify({...action.payload}));
+            state.user = action.payload;
+        },
+        [bookbed.rejected]:(state,action)=>
+        {
+            state.loading = false;
+        },
+        [bookappointment.pending]:(state,action)=>
+        {
+            state.loading = true;
+
+        },
+        [bookappointment.fulfilled]:(state,action)=>
+        {
+            state.loading = false;
+            localStorage.setItem("user", JSON.stringify({...action.payload}));
+            state.user = action.payload;
+        },
+        [bookappointment.rejected]:(state,action)=>
+        {
+            state.loading = false;
         },
      }
 })

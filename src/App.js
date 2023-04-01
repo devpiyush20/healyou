@@ -13,6 +13,7 @@ import Map from './component/Map';
 import Doc from './component/Doc';
 import Vcall from './component/Vcall';
 import NavBar2 from './component/Navbar2';
+import Dashboard from './component/Dashboard';
 function App() {
   return (
     <>
@@ -54,6 +55,9 @@ function App() {
              </Route>
              <Route exact path='/vcall'>
     <Vcall/>
+             </Route>
+             <Route exact path='/dashboard'>
+    <Dashboard/>
              </Route>
 
 

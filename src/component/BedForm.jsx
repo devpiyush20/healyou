@@ -9,43 +9,40 @@ import { useHistory } from 'react-router'
 const BedForm = () => {
   const history = useHistory();
 
-  const handleClick=()=>{
-    window.alert("Bed booked successfully")
-
-    history.push('/')
-      }
+ 
   const user = JSON.parse(localStorage.getItem("user"))
   const [img, setImg] = useState("");
   const [name, setName] = useState(user?.name);
   const [email, setEmail] = useState(user?.email);
-
+  
 
   let base64String = "";
      
-    function imageUploaded() {
+  function imageUploaded() {
         var file = document.querySelector(
             'input[type=file]')['files'][0];
      
         var reader = new FileReader();
-        console.log("next");
          
         reader.onload = function () {
             base64String = reader.result;     
             // alert(imageBase64Stringsep);
             setImg(base64String)
             console.log(base64String);
+          }
+          reader.readAsDataURL(file);
         }
-        reader.readAsDataURL(file);
-    }
-    const dispatch = useDispatch()
-
+        const dispatch = useDispatch()
+        
     const handle = ()=>{
 const formValue = {
   name:name,
   email:email, 
   adhar:img,
 }
+console.log(formValue)
 dispatch(bookbed({formValue, history}));
+window.alert("Bed booked successfully")
     }
   return (
     <div className='mn'>
@@ -55,10 +52,9 @@ dispatch(bookbed({formValue, history}));
        <label htmlFor="adhar">Upload Adhar Image</label>
             <input type="file" name="adhar" className='fi'  id='fi' onChange={()=>{
               imageUploaded()
-              // console.log(document.getElementById("fi").value)
             }}/>
         <div className="sb" onClick={()=>{
-          handleClick()
+          handle()
         }}>Submit</div>
         </div>
     </div>
