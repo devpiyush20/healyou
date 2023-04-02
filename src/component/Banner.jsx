@@ -3,9 +3,17 @@ import './Banner.css'
 import { MdOutlineHomeRepairService } from 'react-icons/md'
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Slider from './slider'
+// import Slider from './slider'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
+  const servicepages = () => {
+    const element = document.getElementById('category')
+    if (element.value === 'none') {
+      alert('Please Select a Service!!!')
+    }
+  }
+
   return (
     <article className='mainpage'>
       {/* left-section */}
@@ -35,12 +43,11 @@ const Banner = () => {
             <option value='Pathology'>Pathology</option>
             <option value='Online Consultation'>Online Consultation</option>
           </select>
-
-          <button className='go'>Go</button>
+          <button className='go' onClick={servicepages}>
+            Go
+          </button>
         </div>
-        <div className='carousel'>
-          <Slider />
-        </div>
+        <div className='carousel'>{/* <Slider /> */}</div>
       </div>
     </article>
   )

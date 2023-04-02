@@ -10,12 +10,18 @@
   flex-direction: column;
   flex: 1;
   flex-wrap: wrap;
-  margin-top: 5%;
   justify-content: center;
   align-items: center;
   min-width: 350px;
 }
-
+.lefttop {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .greet {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +29,7 @@
   border-radius: 25px;
   justify-content: center;
   background-color: #40d06d;
-  padding: 3px;
+  padding: 3px 10px;
 }
 .greetmessage {
   text-align: center;
@@ -43,8 +49,6 @@
 }
 
 .searchBox {
-  opacity: 0;
-
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -53,31 +57,22 @@
   padding: 10px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
+  margin-top: 10%;
 }
 
 .icon {
-  margin: 8px;
+  margin-right: 4px;
+  width: 50px;
+  height: auto;
 }
-.input {
-  width: 28%;
-  margin: 8px;
-  height: 30px;
-  border-radius: 10px;
-  font-family: sans-serif;
-  color: #40d06d;
-  background-color: #0a2627;
-  border: solid;
-  border-color: #40d06d;
-  border-width: 1px;
-  transition: color 0.3s;
-  transition: background-color 0.3s;
-}
+
 .category {
-  width: 30%;
+  width: 60%;
   margin: 8px;
-  height: 30px;
+  padding: 5px 10px;
   border-radius: 10px;
+  font-size: 25px;
   font-family: sans-serif;
   color: #40d06d;
   background-color: #0a2627;
@@ -89,9 +84,9 @@
 }
 .go {
   margin: 8px;
-  height: 30px;
   border-radius: 10px;
   font-family: sans-serif;
+  font-size: 25px;
   color: #40d06d;
   background-color: #0a2627;
   border: solid;
@@ -99,8 +94,7 @@
   border-width: 1px;
   transition: color 0.3s;
   transition: background-color 0.3s;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 3px 10px;
   vertical-align: middle;
 }
 .go:hover {
@@ -111,14 +105,7 @@
   color: #40d06d;
   background-color: #0a2627;
 }
-.input:hover {
-  color: #0a2627;
-  background-color: #40d06d;
-}
-.input:active {
-  color: #40d06d;
-  background-color: #0a2627;
-}
+
 .mapicon {
   filter: invert(1);
 }
