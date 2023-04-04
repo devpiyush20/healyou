@@ -1,9 +1,9 @@
 import React from 'react'
 import './Banner.css'
 import { MdOutlineHomeRepairService } from 'react-icons/md'
-import Button from 'react-bootstrap/Button'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
-// import Slider from './slider'
+import Slider from './slider'
 import { Link } from 'react-router-dom'
 
 const Banner = () => {
@@ -28,7 +28,7 @@ const Banner = () => {
         <div className='slogan'>
           <h1>We are always there by your side to treat you the best ! </h1>
         </div>
-        <div className='line'></div>
+        <div className='greenline'></div>
       </div>
 
       {/* right-section */}
@@ -47,7 +47,9 @@ const Banner = () => {
             Go
           </button>
         </div>
-        <div className='carousel'>{/* <Slider /> */}</div>
+        <div className='carousel'>
+          <Slider />
+        </div>
       </div>
     </article>
   )

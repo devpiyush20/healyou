@@ -39,7 +39,7 @@
   text-align: center;
   max-width: 60%;
 }
-.line {
+.greenline {
   display: flex;
   flex-wrap: wrap;
   border: #40d06d solid 4px;
@@ -202,7 +202,7 @@
   height: 16px;
   width: 16px;
   margin: 0 3px;
-  background-color: #acc;
+  background-color: rgb(2, 21, 21);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.5s ease;

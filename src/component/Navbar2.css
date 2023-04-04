@@ -83,8 +83,9 @@ li {
   display: none;
   justify-content: space-between;
   gap: 60px;
+  z-index: 100;
 }
-.us{
+.us {
   width: 50px;
   position: absolute;
   right: 30px;
@@ -103,6 +104,7 @@ li {
     height: fit-content;
     box-shadow: 2px 4px 7px rgb(8, 25, 31);
     padding-bottom: 10px;
+    z-index: 100;
   }
   .navmenu2.active {
     top: 76px;

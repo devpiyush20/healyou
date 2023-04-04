@@ -1,0 +1,44 @@
+.appointmentcard {
+  border: solid;
+  border-color: #77ce93;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #142728;
+  padding: 10px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.confirm {
+  border: none;
+  font-size: 20px;
+  padding: 3px 10px;
+  color: #0a2627;
+  background-color: #40d06d;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+  position: absolute;
+  right: 6px;
+  bottom: 0;
+}
+.confirm:hover {
+  color: #40d06d;
+  background-color: #0a2627;
+  border: solid;
+  border-color: #40d06d;
+  border-width: 1px;
+  padding: 2px 10px;
+}
+.pdficon {
+  height: auto;
+  width: 20px;
+  margin: 5px;
+}
+@media (max-width: 710px) {
+  .appointmentcard {
+    width: 100%;
+  }
+}

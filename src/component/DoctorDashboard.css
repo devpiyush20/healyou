@@ -1,0 +1,86 @@
+.page {
+  padding-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+p {
+  margin-bottom: 3px;
+}
+.Doctorsinfo {
+  border: solid;
+  border-color: white;
+  border-width: 2px;
+  border-radius: 5px;
+  background-color: #123d3e;
+  padding: 10px;
+  width: fit-content;
+  margin-bottom: 10px;
+}
+.edit {
+  border: none;
+  font-size: 20px;
+  padding: 3px 10px;
+  color: #0a2627;
+  background-color: #40d06d;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.edit:hover {
+  color: #40d06d;
+  background-color: #0a2627;
+  border: solid;
+  border-color: #40d06d;
+  border-width: 1px;
+  padding: 2px 10px;
+}
+
+.line {
+  width: 100%;
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+  margin-bottom: 10px;
+}
+.upcomingappointments {
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+.title {
+  font-size: 25px;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-content: space-between;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 30%;
+  top: 30%;
+  z-index: 50;
+  border: 2px solid #40d06d;
+  padding: 10px;
+  background-color: #0a2627;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px black, -10px -10px 20px black;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+@media (max-width: 710px) {
+  .form-popup {
+    left: 0;
+    width: 90%;
+    margin: 20px;
+  }
+}
