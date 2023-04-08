@@ -2,6 +2,12 @@ import React, { useState } from 'react'
 import './register.css'
 import doc from "../image/doc2.png"
 import logo from '../image/logoo.png'
+import cross from '../image/cross.png'
+import add from '../image/add.png'
+import addf from '../image/addfile.png'
+
+
+
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
 import { register } from '../redux/features/userSlice'
@@ -12,6 +18,20 @@ const Register = () => {
   const [pass, setPass] = useState("")
   const [cpass, setCpass] = useState("")
   const [email, setEmail] = useState("")
+  const [dob, setDob] = useState("")
+  const [dspec, setDspec] = useState([])
+  const [spec, setSpec] = useState("")
+  const [dcert, setDcert] = useState("")
+  const [dimg, setDimg] = useState("")
+  const [type, setType] = useState("")
+  const [hadrs, setHadrs] = useState("")
+
+
+
+
+
+
+
   const dispatch = useDispatch();
   const history = useHistory()
   const handleSubmit = ()=>{
@@ -26,37 +46,153 @@ const Register = () => {
       dispatch(register({formValue, history}));
     }
   }
+  const addSpec = ()=>{
+dspec.push(spec)
+setDspec(dspec)
+    setSpec("");
+    console.log(dspec)
+  }
+const imageUploaded=(tp)=> {
+  var file;
+  if(tp==="file"){
+
+  
+     file = document.querySelector(
+        'input[type=file]')['files'][0];
+     }
+        else
+        {
+          file = document.querySelector(
+            'input[type=file]')['files'][1];
+        }
+        document.getElementById("uf").style.border="2px solid white"
+ 
+    var reader = new FileReader();
+     
+    reader.onload = function () {
+        const base64String = reader.result;     
+        if(tp==="file")
+        {
+          setDcert(base64String)
+        }
+        else{
+          setDimg(base64String)
+        }
+      }
+      reader.readAsDataURL(file);
+    }
+    const removeTag= (vl)=>{
+      console.log(vl)
+      const obj = dspec.filter((e)=>{
+        return vl!==e;
+      })
+      setDspec(obj)
+    }
+    const handleType=(typ)=>{
+      if(typ==="user"){
+        document.getElementById('uss').style.display="flex";
+        document.getElementById('dc').style.display="none";
+        document.getElementById('hadrs').style.display="none";
+
+      }
+      if(typ==="doctor"){
+        document.getElementById('uss').style.display="flex";
+        document.getElementById('db').style.display="none";
+        document.getElementById('dc').style.display="flex";
+        document.getElementById('hadrs').style.display="none";
+
+      }
+      if(typ==="hospital" || typ==="pathalogy"){
+        document.getElementById('uss').style.display="flex";
+        document.getElementById('db').style.display="none";
+        document.getElementById('dc').style.display="flex";
+        document.getElementById('spi').style.display="none";
+        document.getElementById('hadrs').style.display="inline-block";
+      }
+setType(typ);
+Array.from(document.getElementsByClassName("btn")).map((e)=>{
+
+  e.style.background = "#40D06D"
+})
+document.getElementById(typ).style.background="white"
+    }
   return (
     <>
+    
     <div className="main">
         <div className="rg">
-            <div className="top">
+        <div className="top">
             <h2 className="rgt">SignUp Here</h2>
             <img src={logo} alt="logo" />
             </div>
-            <div className="name">
-                <input type="text" name="fname" className='nm' placeholder='First Name' value={fname} onChange={(e)=>{
+            <div className="opt">
+              <div className='btn' id='user' onClick={()=>{handleType("user")}}>User</div>
+              <div className='btn' id='doctor' onClick={()=>{handleType("doctor")}}>Doctor</div>
+              <div className='btn' id='hospital' onClick={()=>{handleType("hospital")}}>Hospital</div>
+            
+              <div className='btn' id='pathalogy' onClick={()=>{handleType("pathalogy")}}>Pathalogy</div>
+            </div>
+          <div className="uss" id='uss'>
+            
+          
+                <input type="text" name="name" className='nm' placeholder='Name' value={fname} onChange={(e)=>{
               setFname(e.target.value)
             }}/>
-                <input type="text" name="lname" className='nm' placeholder='Last Name' value={lname} onChange={(e)=>{
-              setLname(e.target.value)
-            }}/>
-            </div>
+              
              <input type="email" name="email" placeholder='Email' value={email} onChange={(e)=>{
               setEmail(e.target.value)
             }}/>
              <input type="tel" name="tel" placeholder='10 digit number' value={tel} onChange={(e)=>{
               setTel(e.target.value)
             }}/>
+            <input type="text" name="dob" id='db' placeholder='DOB (dd/mm/yyyy)' value={dob} onChange={(e)=>{
+              setDob(e.target.value)
+            }}/>
              <input type="password" name="pass" placeholder='Enter Password' value={pass} onChange={(e)=>{
-              setPass(e.target.value)
-            }}/>
+               setPass(e.target.value)
+              }}/>
              <input type="password" name="cpass" placeholder='Confirm Password' value={cpass} onChange={(e)=>{
-              setCpass(e.target.value)
+               setCpass(e.target.value)
+              }}/>
+              </div>
+            <div className="dc" id='dc'>
+            <input type="text" name="haddrs" id='hadrs'  placeholder='Full Address' value={hadrs} onChange={(e)=>{
+              setHadrs(e.target.value)
             }}/>
+            <div className="spi" id='spi'>
+            
+
+            <input type="text" name="spec"   placeholder='Speciality' value={spec} onChange={(e)=>{
+              setSpec(e.target.value)
+            }}/>
+            <img src={add} alt="" className='add' onClick={addSpec}/>
+            </div>
+            <div className="spc">
+              {
+                Array.from(dspec)?.map((e)=>{
+                  return  <div className="sp"><span> {e}</span><span><img src={cross} alt="cross" className='cross' onClick={()=>{
+                    removeTag(e)
+                  }} /></span></div>
+
+                })
+              }
+            </div>
+            
+            <div className="uf" id='uf'><img src={addf} alt="" className='add'/>
+            <span>Upload Certificates</span></div>
+            <input type="file" name="adhar" className='fi'  id='fi' onChange={()=>{
+              imageUploaded("file")
+            }}/>
+            <div className="uf" id='uf'><img src={addf} alt="" className='add'/>
+            <span>Upload Image</span></div>
+            <input type="file" name="adhar" className='fi'  id='fi' onChange={()=>{
+              imageUploaded("img")
+            }}/>
+            
+            </div>
              <div className="btnn" onClick={()=>{handleSubmit()}}><h5>SignUp</h5></div>
         </div>
-        <img src={doc} alt="" className='doc'/>
+        <img src={doc} alt="" className='doc' />
     </div>
     </>
   )

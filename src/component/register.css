@@ -11,15 +11,27 @@ justify-content: center;
 .rg{
     display: flex;
     flex-direction: column;
-    row-gap: 9px;
+    row-gap:10px;
     justify-content: center;
     align-items: center;
-    background: rgba(217, 217, 217, 0.1);
     padding: 20px;
    border-radius: 25px;
     overflow: hidden;
+    background-color: rgba(147, 147, 147, 0.2); 
 }
-.rg input{
+.uss,.dc{
+    display: none;
+    flex-direction: column;
+    row-gap: 9px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+   border-radius: 25px;
+}
+.dc{
+    margin-top: -20px;
+}
+.uss input, .dc input{
     background: rgba(217, 217, 217, 0.2);
     width: 400px;
 height: 52px;
@@ -48,8 +60,8 @@ font-size: 19px;
     column-gap: 20px;
     justify-content: center;
     align-items: center;
-    margin-top: -30px;
-    margin-left: -25px;
+    margin-top: -25px;
+    margin-left: -50px;
     z-index: 10;
     padding: 5px;
     
@@ -71,6 +83,67 @@ font-size: 19px;
     padding: 10px;
     border-radius: 25px;
     cursor: pointer;
+}
+.opt
+{
+    display: inline-flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+.spc{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 400px;
+}
+.sp{
+    background-color: rgba(147, 147, 147, 0.735);
+    padding: 6px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.cross{
+    width: 12px;
+    margin-left: 6px;
+}
+.add{
+    width: 40px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+.add:hover{
+    filter: invert(1);
+}
+.cross:hover{
+    filter: invert(1);
+}
+.spi input{
+    width: 350px;
+    /* margin-left: -50px; */
+}
+.fi{
+    margin-top: -60px;
+    opacity: 0;
+}
+.uf{
+    width: 400px;
+    height: 52px;
+    border-radius: 25px;
+    padding: 8px;
+    color: white;
+    background-color: rgba(147, 147, 147, 0.735);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#hadrs{
+/* display: none; */
 }
 @media screen and (max-width:400px) {
     .doc{
