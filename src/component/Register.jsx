@@ -12,8 +12,7 @@ import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router'
 import { register } from '../redux/features/userSlice'
 const Register = () => {
-  const [fname, setFname] = useState("")
-  const [lname, setLname] = useState("")
+  const [name, setName] = useState("")
   const [tel, setTel] = useState("")
   const [pass, setPass] = useState("")
   const [cpass, setCpass] = useState("")
@@ -21,6 +20,8 @@ const Register = () => {
   const [dob, setDob] = useState("")
   const [dspec, setDspec] = useState([])
   const [spec, setSpec] = useState("")
+  const [qual, setQual] = useState("")
+  const [dqual, setDqual] = useState([])
   const [dcert, setDcert] = useState("")
   const [dimg, setDimg] = useState("")
   const [type, setType] = useState("")
@@ -38,10 +39,17 @@ const Register = () => {
     if(pass===cpass)
     {
       const formValue = {
-        name:fname+" "+lname,
+        name:name,
         email:email,
         password:pass,
-        tel:tel
+        tel:tel,
+        dob:dob,
+        type:type,
+        address:hadrs,
+        spec:dspec,
+        dcert:dcert,
+        dimg:dimg,
+        dqual:dqual
       }
       dispatch(register({formValue, history}));
     }
@@ -52,6 +60,12 @@ setDspec(dspec)
     setSpec("");
     console.log(dspec)
   }
+  const addQual = ()=>{
+    dqual.push(qual)
+    setDqual(dqual)
+        setQual("");
+        console.log(dspec)
+      }
 const imageUploaded=(tp)=> {
   var file;
   if(tp==="file"){
@@ -87,6 +101,13 @@ const imageUploaded=(tp)=> {
         return vl!==e;
       })
       setDspec(obj)
+    }
+    const removeQual= (vl)=>{
+      console.log(vl)
+      const obj = dqual.filter((e)=>{
+        return vl!==e;
+      })
+      setDqual(obj)
     }
     const handleType=(typ)=>{
       if(typ==="user"){
@@ -135,8 +156,8 @@ document.getElementById(typ).style.background="white"
           <div className="uss" id='uss'>
             
           
-                <input type="text" name="name" className='nm' placeholder='Name' value={fname} onChange={(e)=>{
-              setFname(e.target.value)
+                <input type="text" name="name" className='nm' placeholder='Name' value={name} onChange={(e)=>{
+              setName(e.target.value)
             }}/>
               
              <input type="email" name="email" placeholder='Email' value={email} onChange={(e)=>{
@@ -161,6 +182,25 @@ document.getElementById(typ).style.background="white"
             }}/>
             <div className="spi" id='spi'>
             
+<div>
+
+            <input type="text" name="qual"   placeholder='Qualification' value={qual} onChange={(e)=>{
+              setQual(e.target.value)
+            }}/>
+            <img src={add} alt="" className='add' onClick={addQual}/>
+    
+              </div>
+            <div className="spc">
+              {
+                Array.from(dqual)?.map((e)=>{
+                  return  <div className="sp"><span> {e}</span><span><img src={cross} alt="cross" className='cross' onClick={()=>{
+                    removeQual(e)
+                  }} /></span></div>
+                  
+                })
+              }
+              </div>
+              <div>
 
             <input type="text" name="spec"   placeholder='Speciality' value={spec} onChange={(e)=>{
               setSpec(e.target.value)
@@ -176,6 +216,7 @@ document.getElementById(typ).style.background="white"
 
                 })
               }
+                </div>
             </div>
             
             <div className="uf" id='uf'><img src={addf} alt="" className='add'/>

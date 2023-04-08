@@ -100,6 +100,7 @@ font-size: 19px;
     justify-content: flex-start;
     align-items: center;
     max-width: 400px;
+    margin-top: 4px;
 }
 .sp{
     background-color: rgba(147, 147, 147, 0.735);
@@ -121,6 +122,13 @@ font-size: 19px;
 }
 .cross:hover{
     filter: invert(1);
+}
+.spi{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 9px;
 }
 .spi input{
     width: 350px;
