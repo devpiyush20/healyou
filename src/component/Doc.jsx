@@ -1,93 +1,93 @@
 import React from 'react'
 import DocCard from './DocCard'
-import "./doc.css"
+import './doc.css'
+import ScrollTopbutton from './ScrollTopbutton'
 const Doc = () => {
-    const docData=[
-        {
-          doc:"Dr. Raghav",
-          specialization:"cancer",
-           college:"IERT MED"
-        },
-        {
-          doc:"Dr. Raghav",
-          specialization:"cancer",
-           college:"IERT MED"
-        },
-        {
-          doc:"Dr. Raghav",
-          specialization:"cancer",
-           college:"IERT MED"
-        },
-        {
-          doc:"Dr. Raghav",
-          specialization:"cancer",
-           college:"IERT MED"
-        },
-        {
-          doc:"Dr. Raghav",
-          specialization:"cancer",
-           college:"IERT MED"
-        },
-        {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          },
-          {
-            doc:"Dr. Raghav",
-            specialization:"cancer",
-             college:"IERT MED"
-          }
-      ]
+  const docData = [
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+    {
+      doc: 'Dr. Raghav',
+      specialization: 'cancer',
+      college: 'IERT MED',
+    },
+  ]
   return (
     <div className='f-main'>
-                <div className="d-main">
-                    {
-                        docData.map((e)=>{
-                            return <DocCard doc ={e.doc} specialization ={e.specialization}/>
-                        })
-                    }
-                </div>
+      <ScrollTopbutton />
+      <div className='d-main'>
+        {docData.map((e) => {
+          return <DocCard doc={e.doc} specialization={e.specialization} />
+        })}
+      </div>
     </div>
   )
 }
