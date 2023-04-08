@@ -116,7 +116,7 @@ const Services = () => {
           <div className='drpdwn1'
           >Doctors</div>
           { docData.map((e)=>{
-            return <DocCard  doc={e.doc} college={e.college} specialization={e.specialization} />
+            return <DocCard  btn="Book Appointment"  doc={e.doc} college={e.college} specialization={e.specialization} />
            })
           }
           </div>

@@ -111,6 +111,10 @@ font-size: 12px;
 border-radius: 10px;
 width: 70px;
 text-align: center;
+cursor: pointer;
+}
+.btnnn:hover{
+    background-color: white;
 }
 .sp{
     background-color: rgba(147, 147, 147, 0.735);

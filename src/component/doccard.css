@@ -6,6 +6,8 @@
       background-color: #403e3ec8;
       padding: 8px 5px;
       border-radius: 10px;
+      justify-content: center;
+      align-items: center;
 
 }
 .doc-card img{
@@ -24,4 +26,16 @@
     cursor: pointer;
     padding: 5px;
 
+}
+.spp,.ql{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+.tg{
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
 }
