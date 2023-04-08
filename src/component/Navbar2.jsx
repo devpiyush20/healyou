@@ -39,14 +39,19 @@ function Navbar2() {
         </button>
       </Link>
       <Navmenu className='menu'>
-        <Link to='/'>
+        <Link to='/hospital'>
           <button id='b' className='button'>
-            About
+            Hospitals
           </button>
         </Link>
-        <Link to='/services'>
+        <Link to='/pathalogy'>
           <button id='b' className='button'>
-            Services
+            Pathology
+          </button>
+        </Link>
+        <Link to='/doc'>
+          <button id='b' className='button'>
+            Online Doctors
           </button>
         </Link>
 
@@ -70,16 +75,23 @@ function Navbar2() {
       </Navmenu>
       <ul id='navmenu2' className='navmenu2'>
         <li>
-          <Link to='/'>
+          <Link to='/hospital'>
             <button id='b' className='button' onClick={hide}>
-              About
+              Hospitals
             </button>
           </Link>
         </li>
         <li>
-          <Link to='/'>
+          <Link to='/pathalogy'>
             <button id='b' className='button' onClick={hide}>
-              Services
+              Pathology
+            </button>
+          </Link>
+        </li>
+        <li>
+          <Link to='/doc'>
+            <button id='b' className='button' onClick={hide}>
+              Online Doctors
             </button>
           </Link>
         </li>

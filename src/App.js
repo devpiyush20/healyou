@@ -15,6 +15,7 @@ import Vcall from './component/Vcall'
 import NavBar2 from './component/Navbar2'
 import Dashboard from './component/Dashboard'
 import DoctorDashboard from './component/DoctorDashborad'
+import HospitalDashboard from './component/HospitalDashboard'
 function App() {
   return (
     <>
@@ -59,6 +60,9 @@ function App() {
           </Route>
           <Route exact path='/doctorboard'>
             <DoctorDashboard />
+          </Route>
+          <Route exact path='/hosdashboard'>
+            <HospitalDashboard />
           </Route>
         </React.Fragment>
       </Switch>

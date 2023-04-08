@@ -1,89 +1,177 @@
-.main{
-    margin-top: 50px;
-display: flex;
-flex-wrap: wrap;
-column-gap: 300px;
-row-gap: 100px;
-align-items: center;
-justify-content: center;
+.main {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 300px;
+  row-gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.rg {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: rgba(147, 147, 147, 0.2);
+}
+.uss,
+.dc {
+  display: none;
+  flex-direction: column;
+  row-gap: 9px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px;
+}
+.dc {
+  margin-top: -20px;
+}
+.uss input,
+.dc input {
+  background: rgba(217, 217, 217, 0.2);
+  width: 400px;
+  height: 52px;
+  border-radius: 25px;
+  outline: none;
+  padding: 8px;
+  color: white;
+  font-size: 19px;
+}
+.name {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 9px;
+  column-gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+.name input {
+  width: 200px;
+}
+.top {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: -25px;
+  margin-left: -50px;
+  z-index: 10;
+  padding: 5px;
+}
+.top img {
+  width: 60px;
+  height: 60px;
+}
+.rgt {
+  background-color: #40d06d;
+  padding: 5px 80px;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 10px;
+}
+.btnn {
+  background-color: #40d06d;
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.opt {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.spc {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 400px;
+  margin-top: 4px;
+}
+.sp {
+  background-color: rgba(147, 147, 147, 0.735);
+  padding: 6px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.cross {
+  width: 12px;
+  margin-left: 6px;
+}
+.add {
+  width: 40px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+.add:hover {
+  filter: invert(1);
+}
+.cross:hover {
+  filter: invert(1);
+}
+.spi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 9px;
+}
+.spi input {
+  width: 350px;
+  /* margin-left: -50px; */
+}
+.fi {
+  margin-top: -60px;
+  opacity: 0;
+}
+.uf {
+  width: 400px;
+  height: 52px;
+  border-radius: 25px;
+  padding: 8px;
+  color: white;
+  background-color: rgba(147, 147, 147, 0.735);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
+@media screen and (max-width: 400px) {
+  .doc {
+    display: none;
+  }
+  .rg input {
+    width: 250px;
+  }
+  .btnn {
+    width: 250px;
+  }
+  .rg {
+    width: 320px;
+  }
 }
-.rg{
-    display: flex;
-    flex-direction: column;
-    row-gap: 9px;
-    justify-content: center;
-    align-items: center;
-    background: rgba(217, 217, 217, 0.1);
-    padding: 20px;
-   border-radius: 25px;
-    overflow: hidden;
-}
-.rg input{
-    background: rgba(217, 217, 217, 0.2);
-    width: 400px;
-height: 52px;
-border-radius: 25px;
-outline: none;
-padding: 8px;
-color: white;
-font-size: 19px;
-}
-.name{
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 9px;
-    column-gap: 6px;
-    justify-content: center;
-    align-items: center;
-}
-.name input{
-    width: 200px;
-}
-.top{
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    column-gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: -30px;
-    margin-left: -25px;
-    z-index: 10;
-    padding: 5px;
-    
-}
-.top img{
-    width: 60px;
-    height: 60px;
-}
-.rgt{
-    background-color: #40D06D;
-    padding: 5px 80px;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 10px;
-}
-.btnn{
-    background-color: #40D06D;
-    width: 400px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 25px;
-    cursor: pointer;
-}
-@media screen and (max-width:400px) {
-    .doc{
-        display: none;
-    }
-    .rg input{
-        width: 250px;
-    }
-     .btnn{
-        width: 250px;
-    
-    }
-    .rg{
-        width: 320px;
-    }
+.btnnn {
+  background-color: #40d06d;
+  color: black;
+  font-weight: 600;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 10px;
+  width: 70px;
+  text-align: center;
+  cursor: pointer;
 }

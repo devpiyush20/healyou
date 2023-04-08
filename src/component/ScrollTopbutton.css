@@ -1,0 +1,19 @@
+.sttb {
+  display: none;
+
+  width: 50px;
+  border: none;
+
+  border-radius: 50%;
+  background-color: #040e0f;
+  color: white;
+  font-size: 30px;
+  z-index: 100;
+}
+.activescroll {
+  display: block;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+}

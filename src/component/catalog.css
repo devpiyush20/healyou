@@ -1,40 +1,134 @@
-.mainn{
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    column-gap: 100px;
-    row-gap: 100px;
-    align-items: center;
+.mainn {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+  column-gap: 100px;
+  row-gap: 100px;
+  align-items: center;
 }
 
-.catalog{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 20px;
-    row-gap: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-left: 200px;
+}
+.r-options {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
 
+  margin-left: 410px;
 }
-.r-options{
-display: flex;
-flex-direction: column;
-row-gap: 20px;
+.op1 {
+  background: #40d06d;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 25px;
+  padding-top: 20px;
 }
-.op1{
-    background: #40D06D;
-    padding: 10px;
-border-top-right-radius: 25px;
-border-bottom-right-radius: 25px;
-}
-.loc{
-    display: flex;
-    flex-direction: row;
-    column-gap: 10px;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+.loc {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  height: fit-content;
 }
 
+.sideImg {
+  width: 300px;
+  height: 1000px;
+  margin-top: -750px;
+}
+.side_card {
+  display: flex;
+
+  position: absolute;
+}
+
+.viewMore {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  margin-left: 800px;
+}
+.locationfetch {
+  border: none;
+  color: white;
+  background-color: transparent;
+  transition: 0.3s;
+}
+.locationfetch:hover {
+  color: #40d06d;
+}
+.locationfetch:active {
+  color: white;
+  border: solid;
+  border-color: #40d06d;
+  border-width: 1px;
+  border-radius: 20px;
+}
+.cityfetch {
+  border: none;
+  border-radius: 20px;
+  padding: 3px;
+  width: 210px;
+  height: 40px;
+}
+.srch {
+  border: solid;
+  border-color: #40d06d;
+  border-width: 1px;
+  padding: 1px 3px;
+  border-radius: 20px;
+  color: white;
+  background-color: transparent;
+  transition: 0.3s;
+  margin: 0;
+  height: 40px;
+}
+
+.srch:hover {
+  background-color: white;
+  color: #40d06d;
+}
+.locationicon {
+  height: 30px;
+  width: auto;
+}
+@media only screen and (max-width: 600px) {
+  .side_card {
+    display: none;
+  }
+  .catalog {
+    margin-left: 10px;
+  }
+
+  .r-options {
+    margin-left: 20px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .viewMore {
+    margin-left: 150px;
+    margin-top: -80px;
+  }
+  .op1 {
+    margin-bottom: 10px;
+  }
+}

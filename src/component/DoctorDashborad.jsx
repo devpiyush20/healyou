@@ -1,13 +1,9 @@
 import React from 'react'
 import './DoctorDashboard.css'
 import Doctorappointmentcard from './Doctorappointmentcard'
+import ScrollTopbutton from './ScrollTopbutton'
+import doctordummy from '../image/doctordummy.jpg'
 
-const doctor = {
-  Name: 'Dr. Rajnikanth',
-  Qualification: 'MBBS',
-  Phone_no: '111111111',
-  email: 'rajnikanth1god@gmail.com',
-}
 const appointmentlist = [
   {
     id: 1,
@@ -43,20 +39,23 @@ function close() {
   document.getElementById('myForm').style.display = 'none'
 }
 function DoctorDashborad() {
-  const doctorinfo = Object.entries(doctor)
   return (
     <div className='page'>
+      <ScrollTopbutton />
       <article className='Doctorsinfo'>
-        {doctorinfo.map(([key, value]) => (
-          <p>
-            {key} : {value}
-          </p>
-        ))}
+        <img src={doctordummy} alt='' className='docimg' />
+        <div className='inf'>
+          <span className='nameofdoctor'>Dr. Rajnikanth</span>
+          <p> 9999999</p>
+          <p>MBBS, MS</p>
+          <p>Orthodontist</p>
+        </div>
       </article>
       <button className='edit'>Edit</button>
       <div className='line' />
       <div className='upcomingappointments'>
         <p className='title'>Upcoming Appointments</p>
+        <div className='titleline'></div>
         <div className='cards'>
           {appointmentlist.map((appointment) => (
             <Doctorappointmentcard id={appointment.id} {...appointment} />

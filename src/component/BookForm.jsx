@@ -1,66 +1,93 @@
 import React, { useState } from 'react'
-import logo from "../image/logoo.png"
+import logo from '../image/logoo.png'
+import ScrollTopbutton from './ScrollTopbutton'
 
-import af from "../image/addfile.png"
-import "./bookform.css"
+import af from '../image/addfile.png'
+import './bookform.css'
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { bookappointment } from '../redux/features/userSlice'
 const BookForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [tel, setTel] = useState("");
-  const [file, setFile] = useState("");
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [tel, setTel] = useState('')
+  const [file, setFile] = useState('')
 
-  const history = useHistory();
-  const dispatch =  useDispatch()
-  const handleClick=()=>{
+  const history = useHistory()
+  const dispatch = useDispatch()
+  const handleClick = () => {
     const formValue = {
-      name:name,
-      email:email,
-      tel:tel,
-      file:file
+      name: name,
+      email: email,
+      tel: tel,
+      file: file,
     }
-    dispatch(bookappointment({formValue, history}))
-    window.alert("Appointment Booked! Check your mail for further details ✅")
-      }
-      const handleFile =()=>{
-        console.log(document.querySelector('input[type=file]')['files']);
-        const file = document.querySelector('input[type=file]')['files'][0];
-        const reader = new FileReader()
-        reader.onload=()=>{
-          setFile(reader.result)
-        }
-        reader.readAsDataURL(file)
-      }
+    dispatch(bookappointment({ formValue, history }))
+    window.alert('Appointment Booked! Check your mail for further details ✅')
+  }
+  const handleFile = () => {
+    console.log(document.querySelector('input[type=file]')['files'])
+    const file = document.querySelector('input[type=file]')['files'][0]
+    const reader = new FileReader()
+    reader.onload = () => {
+      setFile(reader.result)
+    }
+    reader.readAsDataURL(file)
+  }
   return (
     <div className='mn'>
-    <div className="f-main">
+      <ScrollTopbutton />
+      <div className='f-main'>
         <h5>Prevention is better than cure!!!</h5>
-        <img src={logo} alt="logo" />
-        <input type="text" name="name" placeholder='Enter Your Name' value={name} onChange={
-          (e)=>{
+        <img src={logo} alt='logo' />
+        <input
+          type='text'
+          name='name'
+          placeholder='Enter Your Name'
+          value={name}
+          onChange={(e) => {
             setName(e.target.value)
-          }
-        }/>
-        <input type="tel" name="tel" maxLength="10" placeholder='Enter Your Phone No' value={tel} onChange={
-          (e)=>{
+          }}
+        />
+        <input
+          type='tel'
+          name='tel'
+          maxLength='10'
+          placeholder='Enter Your Phone No'
+          value={tel}
+          onChange={(e) => {
             setTel(e.target.value)
-          }}/>
-        <input type="email" name="email" placeholder='Your Email' value={email} onChange={
-          (e)=>{
+          }}
+        />
+        <input
+          type='email'
+          name='email'
+          placeholder='Your Email'
+          value={email}
+          onChange={(e) => {
             setEmail(e.target.value)
-          }}/>
-        
-        <label htmlFor="report"> Upload Your reports</label>
-        <input type="file" name="report" placeholder='Your Reports' className='fi'
-         
-         onChange={
-          ()=>{
+          }}
+        />
+
+        <label htmlFor='report'> Upload Your reports</label>
+        <input
+          type='file'
+          name='report'
+          placeholder='Your Reports'
+          className='fi'
+          onChange={() => {
             handleFile()
-          }}/>
-        <div className="sb"  onClick={()=>{handleClick()}}>Submit</div>
-    </div>
+          }}
+        />
+        <div
+          className='sb'
+          onClick={() => {
+            handleClick()
+          }}
+        >
+          Submit
+        </div>
+      </div>
     </div>
   )
 }

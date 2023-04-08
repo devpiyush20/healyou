@@ -1,5 +1,10 @@
 .mainpage {
   display: flex;
+  flex-direction: column;
+}
+
+.firstpage {
+  display: flex;
   row-gap: 5vw;
   column-gap: 2px;
   flex-wrap: wrap;
@@ -79,9 +84,8 @@
   border: solid;
   border-color: #40d06d;
   border-width: 1px;
-  transition: color 0.3s;
-  transition: background-color 0.3s;
 }
+
 .go {
   margin: 8px;
   border-radius: 10px;
@@ -237,4 +241,14 @@
   to {
     opacity: 2;
   }
+}
+
+.secondpage {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+.bannerimage {
+  width: 70%;
+  height: auto;
 }
