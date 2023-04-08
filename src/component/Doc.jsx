@@ -84,7 +84,7 @@ const Doc = () => {
                 <div className="d-main">
                     {
                         docData.map((e)=>{
-                            return <DocCard doc ={e.doc} specialization ={e.specialization}/>
+                            return <DocCard btn="Book Appointmenr" doc ={e.doc} specialization ={e.specialization}/>
                         })
                     }
                 </div>

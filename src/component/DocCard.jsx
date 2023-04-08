@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import ellipse from '../image/ellipse1.png'
 import './doccard.css'
-const DocCard = ({doc,college,specialization}) => {
+const DocCard = ({doc,college,specialization,btn}) => {
   const history = useHistory();
   const handleClick=()=>{
 history.push('/bookappointment')
@@ -18,7 +18,7 @@ history.push('/bookappointment')
         <div className="book-appointment" onClick={()=>{
           handleClick()
         }}>
-            Book Appointment
+            {btn}
         </div>
         </div>      
     </>

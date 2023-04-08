@@ -102,6 +102,16 @@ font-size: 19px;
     max-width: 400px;
     margin-top: 4px;
 }
+.btnnn{
+    background-color: #40D06D;
+    color: black;
+    font-weight: 600;
+    padding: 8px;
+font-size: 12px;
+border-radius: 10px;
+width: 70px;
+text-align: center;
+}
 .sp{
     background-color: rgba(147, 147, 147, 0.735);
     padding: 6px;

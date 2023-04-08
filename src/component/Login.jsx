@@ -50,7 +50,6 @@ const Login = () => {
   return (
     <>
     <div className="main">
-       <img src={doc} alt="doc" className='doc' />
       <div className="rop">
       <h2 className='lg'>Login Here</h2>
         <div className="login">

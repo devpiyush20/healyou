@@ -131,9 +131,9 @@ const imageUploaded=(tp)=> {
         document.getElementById('hadrs').style.display="inline-block";
       }
 setType(typ);
-Array.from(document.getElementsByClassName("btn")).map((e)=>{
+Array.from(document.getElementsByClassName("btnnn")).map((e)=>{
 
-  e.style.background = "#40D06D"
+  return e.style.background = "#40D06D"
 })
 document.getElementById(typ).style.background="white"
     }
@@ -147,11 +147,11 @@ document.getElementById(typ).style.background="white"
             <img src={logo} alt="logo" />
             </div>
             <div className="opt">
-              <div className='btn' id='user' onClick={()=>{handleType("user")}}>User</div>
-              <div className='btn' id='doctor' onClick={()=>{handleType("doctor")}}>Doctor</div>
-              <div className='btn' id='hospital' onClick={()=>{handleType("hospital")}}>Hospital</div>
+              <div className='btnnn' id='user' onClick={()=>{handleType("user")}}>User</div>
+              <div className='btnnn' id='doctor' onClick={()=>{handleType("doctor")}}>Doctor</div>
+              <div className='btnnn' id='hospital' onClick={()=>{handleType("hospital")}}>Hospital</div>
             
-              <div className='btn' id='pathalogy' onClick={()=>{handleType("pathalogy")}}>Pathalogy</div>
+              <div className='btnnn' id='pathalogy' onClick={()=>{handleType("pathalogy")}}>Pathalogy</div>
             </div>
           <div className="uss" id='uss'>
             
@@ -233,7 +233,6 @@ document.getElementById(typ).style.background="white"
             </div>
              <div className="btnn" onClick={()=>{handleSubmit()}}><h5>SignUp</h5></div>
         </div>
-        <img src={doc} alt="" className='doc' />
     </div>
     </>
   )
