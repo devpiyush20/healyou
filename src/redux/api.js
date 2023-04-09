@@ -21,3 +21,9 @@ export const docreview = (formData)=>{
 export const hosreview = (formData)=>{
     return API.post("/hospreview", formData)
 }
+export const hosdoc = (formData)=>{
+    return API.post("/addhospdoc", formData)
+}
+export const addroom = (formData)=>{
+    return API.post("/addroom", formData)
+}

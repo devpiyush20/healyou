@@ -48,6 +48,15 @@ export const docreview = createAsyncThunk("auth/docreview", async ({formValue, h
        console.log(error) 
     }
 })
+export const hosdoc = createAsyncThunk("auth/hosdoc", async ({formValue, history})=>{
+    try {
+        const response = await api.hosdoc(formValue);
+        toast.success("Doctor Added Successfully")
+        return response.data;
+    } catch (error) {
+       console.log(error) 
+    }
+})
 export const hosreview = createAsyncThunk("auth/hosreview", async ({formValue, history})=>{
     try {
         const response = await api.hosreview(formValue);
@@ -79,7 +88,15 @@ try {
 
 }
 })
-
+export const addroom = createAsyncThunk("auth/addroom", async ({formValue, history})=>{
+    try {
+        const response = await api.addroom(formValue);
+        toast.success("Room Added successfully")
+        return response.data;
+    } catch (error) {
+       console.log(error) 
+    }
+})
 
 export const logout  = createAsyncThunk("auth/logout", async ({history})=>{
     history.push('/login')
@@ -199,6 +216,36 @@ const userSlice = createSlice({
             state.user = action.payload;
         },
         [bookappointment.rejected]:(state,action)=>
+        {
+            state.loading = false;
+        },
+        [hosdoc.pending]:(state,action)=>
+        {
+            state.loading = true;
+
+        },
+        [hosdoc.fulfilled]:(state,action)=>
+        {
+            state.loading = false;
+            localStorage.setItem("user", JSON.stringify({...action.payload}));
+            state.user = action.payload;
+        },
+        [hosdoc.rejected]:(state,action)=>
+        {
+            state.loading = false;
+        },
+        [addroom.pending]:(state,action)=>
+        {
+            state.loading = true;
+
+        },
+        [addroom.fulfilled]:(state,action)=>
+        {
+            state.loading = false;
+            localStorage.setItem("user", JSON.stringify({...action.payload}));
+            state.user = action.payload;
+        },
+        [addroom.rejected]:(state,action)=>
         {
             state.loading = false;
         },

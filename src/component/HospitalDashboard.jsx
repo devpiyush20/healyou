@@ -10,6 +10,9 @@ import Review from './Review'
 import cross from '../image/cross.png'
 import add from '../image/add.png'
 import addf from '../image/addfile.png'
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
+import { addroom, hosdoc } from '../redux/features/userSlice'
 const HospitalDashboard = () => {
     const[bdt,setBdt]=useState("")
     const[pr,setPr]=useState("")
@@ -325,26 +328,32 @@ const addDoc =()=>{
     document.getElementById("aad").style.display="flex";
 }
 const bedSubmit=()=>{
-    bdData.push({
+    const formValue ={
         type:bdt,
         price:pr,
         count:Number(cnt)
-    })
+    }
+    bdData.push(formValue)
+    dispatch(addroom({formValue,history}))
     console.log(bdData)
     setBddt(Array.from(bdData))
     setbbdt(bdData)
-    document.getElementById("aad").style.display="none";
+    document.getElementById("abd").style.display="none";
 
 }
+const dispatch = useDispatch()
+const history = useHistory();
 const docSubmit=()=>{
-    docDta.push({
+    const formValue ={
         doc:name,
         tel:tel,
         qual:dqual,
         spec:dspec,
         cert:dcert,
         dimg:dimg
-    })
+    }
+    docDta.push(formValue)
+    dispatch(hosdoc({formValue,history}))
     console.log(docDta)
     setDdt(Array.from(docDta))
     setDddt(docData)
