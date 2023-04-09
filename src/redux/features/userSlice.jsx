@@ -1,16 +1,17 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit"
 import * as api from "../api"
+import {toast} from "react-toastify"
 export const login  = createAsyncThunk("auth/login", async ({formValue, history})=>{
     try {
         const response = await api.signIn(formValue);
         if(response?.data?.email){
 
             history.push("/");
+            toast.success("Loged In successfully")
         }
         else{
-            window.alert("Invalid credentials")
+            toast.error("Invalid credentials")
         }
-        // window.location.reload(false)
         return response.data;
     } catch (error) {
        console.log(error) 
@@ -32,6 +33,16 @@ export const bookbed  = createAsyncThunk("auth/bed", async ({formValue, history}
     try {
         const response = await api.bookbed(formValue);
         history.push("/");
+        toast.success("Bed booked successfully")
+        return response.data;
+    } catch (error) {
+       console.log(error) 
+    }
+})
+export const review = createAsyncThunk("auth/review", async ({formValue, history})=>{
+    try {
+        const response = await api.review(formValue);
+        toast.success("Review Added successfully")
         return response.data;
     } catch (error) {
        console.log(error) 
@@ -52,6 +63,7 @@ export const bookappointment = createAsyncThunk("/bookappointment", async({formV
 try {
     const res = await api.bookappointment(formValue)
     history.push("/")
+    toast.success("Appointment Booked! Check your mail for further details ✅")
     return res.data
 } catch (error) {
     console.log(error) 

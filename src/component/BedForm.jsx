@@ -5,6 +5,7 @@ import FileBase64 from "react-file-base64"
 import { useDispatch } from 'react-redux'
 import { bookbed } from '../redux/features/userSlice'
 import { useHistory } from 'react-router'
+import addf from '../image/addfile.png'
 
 const BedForm = () => {
   const history = useHistory();
@@ -42,14 +43,14 @@ const formValue = {
 }
 console.log(formValue)
 dispatch(bookbed({formValue, history}));
-window.alert("Bed booked successfully")
     }
   return (
     <div className='mn'>
         <div className="f-main">
             <h4>Have Patience</h4>
         <img src={logo} alt="logo" />
-       <label htmlFor="adhar">Upload Adhar Image</label>
+            <div className="uf" id='uf'><img src={addf} alt="" className='add'/>
+            <span>Upload Adhar</span></div>
             <input type="file" name="adhar" className='fi'  id='fi' onChange={()=>{
               imageUploaded()
             }}/>

@@ -6,6 +6,8 @@ import "./bookform.css"
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { bookappointment } from '../redux/features/userSlice'
+import addf from '../image/addfile.png'
+
 const BookForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,7 +24,6 @@ const BookForm = () => {
       file:file
     }
     dispatch(bookappointment({formValue, history}))
-    window.alert("Appointment Booked! Check your mail for further details ✅")
       }
       const handleFile =()=>{
         console.log(document.querySelector('input[type=file]')['files']);
@@ -51,8 +52,8 @@ const BookForm = () => {
           (e)=>{
             setEmail(e.target.value)
           }}/>
-        
-        <label htmlFor="report"> Upload Your reports</label>
+        <div className="uf" id='uf'><img src={addf} alt="" className='add'/>
+            <span>Upload Report</span></div>
         <input type="file" name="report" placeholder='Your Reports' className='fi'
          
          onChange={

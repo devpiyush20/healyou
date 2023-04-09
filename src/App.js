@@ -15,12 +15,15 @@ import Vcall from './component/Vcall';
 import NavBar2 from './component/Navbar2';
 import Dashboard from './component/Dashboard';
 import HospitalDashboard from './component/HospitalDashboard';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <>
                 <Switch>
 <React.Fragment>
    <NavBar2/>
+   <ToastContainer/>
              <Route exact path='/' >
 
    <Banner/>
