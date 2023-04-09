@@ -15,7 +15,9 @@ export const bookbed =  (formData) => {
 export const bookappointment = (formData)=>{
     return API.post("/bookappointment", formData)
 }
-export const review = (formData)=>{
+export const docreview = (formData)=>{
     return API.post("/docreview", formData)
 }
-
+export const hosreview = (formData)=>{
+    return API.post("/hospreview", formData)
+}
