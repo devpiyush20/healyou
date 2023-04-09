@@ -39,9 +39,18 @@ export const bookbed  = createAsyncThunk("auth/bed", async ({formValue, history}
        console.log(error) 
     }
 })
-export const review = createAsyncThunk("auth/review", async ({formValue, history})=>{
+export const docreview = createAsyncThunk("auth/docreview", async ({formValue, history})=>{
     try {
-        const response = await api.review(formValue);
+        const response = await api.docreview(formValue);
+        toast.success("Review Added successfully")
+        return response.data;
+    } catch (error) {
+       console.log(error) 
+    }
+})
+export const hosreview = createAsyncThunk("auth/hosreview", async ({formValue, history})=>{
+    try {
+        const response = await api.hosreview(formValue);
         toast.success("Review Added successfully")
         return response.data;
     } catch (error) {

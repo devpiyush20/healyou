@@ -70,18 +70,22 @@ setDspec(dspec)
       }
 const imageUploaded=(tp)=> {
   var file;
+  console.log(tp)
   if(tp==="file"){
 
   
      file = document.querySelector(
         'input[type=file]')['files'][0];
+        document.getElementById("f1").style.border="2px solid white"
      }
         else
         {
+          document.getElementById("f2").style.border="2px solid white"
+          console.log(document.querySelector(
+            'input[type=file]')['files'][0])
           file = document.querySelector(
-            'input[type=file]')['files'][1];
+            'input[type=file]')['files'][0];
         }
-        document.getElementById("uf").style.border="2px solid white"
  
     var reader = new FileReader();
      
@@ -288,12 +292,12 @@ document.getElementById(typ).style.background="white"
                 </div>
             </div>
             
-            <div className="uf" id='uf'><img src={addf} alt="" className='add'/>
+            <div className="uf" id='f1'><img src={addf} alt="" className='add'/>
             <span>Upload Certificates</span></div>
             <input type="file" name="adhar" className='fi' required id='fi' onChange={()=>{
               imageUploaded("file")
             }}/>
-            <div className="uf" id='uf'><img src={addf} alt="" className='add'/>
+            <div className="uf " id='f2'><img src={addf} alt="" className='add'/>
             <span>Upload Image</span></div>
             <input type="file" name="adhar"  required className='fi'  id='fi' onChange={()=>{
               imageUploaded("img")
