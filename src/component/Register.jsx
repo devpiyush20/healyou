@@ -162,7 +162,7 @@ document.getElementById(typ).style.background="white"
           <div className="uss" id='uss'>
             
           
-                <input type="text" name="name" className='nm' required  placeholder='Name' maxLength={20} value={name} onChange={(e)=>{
+                <input type="text" name="name" className='nm' required  placeholder='Name' maxLength={40} value={name} onChange={(e)=>{
               setName(e.target.value)
              
             }}/>
