@@ -16,6 +16,7 @@ import NavBar2 from './component/Navbar2'
 import Dashboard from './component/Dashboard'
 import DoctorDashboard from './component/DoctorDashborad'
 import HospitalDashboard from './component/HospitalDashboard'
+import OnlineDocInfo from './component/Onlinedocinfo'
 function App() {
   return (
     <>
@@ -63,6 +64,9 @@ function App() {
           </Route>
           <Route exact path='/hosdashboard'>
             <HospitalDashboard />
+          </Route>
+          <Route exact path='/online_doctor_display'>
+            <OnlineDocInfo />
           </Route>
         </React.Fragment>
       </Switch>

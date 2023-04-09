@@ -26,34 +26,52 @@ function Navbar2() {
   }
   const { status } = useSelector((state) => ({ ...state.user }))
   const [isLog, setIslog] = useState(status)
+  const user3 = JSON.parse(localStorage.getItem('user'))
+
   useEffect(() => {
     const user2 = JSON.parse(localStorage.getItem('user'))
     setIslog(user2?.name !== undefined)
     console.log(isLog)
   }, [])
+  const handleDash = () => {
+    if (user3?.hospReviews) {
+      history.push('/hosdashboard')
+    } else if (user3?.qualifications) {
+      history.push('/doctorboard')
+    } else {
+      history.push('/dashboard')
+    }
+  }
   return (
     <div id='nav' className='nav'>
-      <Link to='/'>
-        <button className='logo'>
-          <img src={logo} alt='' className='logo' />
-        </button>
-      </Link>
+      <button className='logo'>
+        <img src={logo} alt='' className='logo' />
+      </button>
       <Navmenu className='menu'>
+        <Link to='/'>
+          <button id='b' className='button'>
+            Home
+          </button>
+        </Link>
         <Link to='/hospital'>
           <button id='b' className='button'>
-            Hospitals
+            Hospital
           </button>
         </Link>
         <Link to='/pathalogy'>
           <button id='b' className='button'>
-            Pathology
+            Pathalogy
           </button>
         </Link>
         <Link to='/doc'>
           <button id='b' className='button'>
-            Online Doctors
+            Doctors
           </button>
         </Link>
+
+        <button id='b' className='button' onClick={handleDash}>
+          Dashboard
+        </button>
 
         {!isLog && !status ? (
           <>
@@ -77,25 +95,29 @@ function Navbar2() {
         <li>
           <Link to='/hospital'>
             <button id='b' className='button' onClick={hide}>
-              Hospitals
+              Hospital
             </button>
           </Link>
         </li>
         <li>
           <Link to='/pathalogy'>
             <button id='b' className='button' onClick={hide}>
-              Pathology
+              Pathalogy
             </button>
           </Link>
         </li>
         <li>
           <Link to='/doc'>
             <button id='b' className='button' onClick={hide}>
-              Online Doctors
+              Doctors
             </button>
           </Link>
         </li>
-
+        <li>
+          <button id='b' className='button' onClick={handleDash}>
+            Dashboard
+          </button>
+        </li>
         {!isLog && !status ? (
           <>
             <li>

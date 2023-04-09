@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import { bookbed } from '../redux/features/userSlice'
 import { useHistory } from 'react-router'
 import ScrollTopbutton from './ScrollTopbutton'
+import Footer from './Footer'
 
 const BedForm = () => {
   const history = useHistory()
@@ -43,31 +44,34 @@ const BedForm = () => {
     window.alert('Bed booked successfully')
   }
   return (
-    <div className='mn'>
-      <ScrollTopbutton />
-      <div className='f-main'>
-        <h4>Have Patience</h4>
-        <img src={logo} alt='logo' />
-        <label htmlFor='adhar'>Upload Adhar Image</label>
-        <input
-          type='file'
-          name='adhar'
-          className='fi'
-          id='fi'
-          onChange={() => {
-            imageUploaded()
-          }}
-        />
-        <div
-          className='sb'
-          onClick={() => {
-            handle()
-          }}
-        >
-          Submit
+    <>
+      <div className='mn'>
+        <ScrollTopbutton />
+        <div className='f-main'>
+          <h4>Have Patience</h4>
+          <img src={logo} alt='logo' />
+          <label htmlFor='adhar'>Upload Adhar Image</label>
+          <input
+            type='file'
+            name='adhar'
+            className='fi'
+            id='fi'
+            onChange={() => {
+              imageUploaded()
+            }}
+          />
+          <div
+            className='sb'
+            onClick={() => {
+              handle()
+            }}
+          >
+            Submit
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   )
 }
 

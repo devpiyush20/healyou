@@ -7,6 +7,7 @@ import './bookform.css'
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { bookappointment } from '../redux/features/userSlice'
+import Footer from './Footer'
 const BookForm = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -35,60 +36,64 @@ const BookForm = () => {
     reader.readAsDataURL(file)
   }
   return (
-    <div className='mn'>
-      <ScrollTopbutton />
-      <div className='f-main'>
-        <h5>Prevention is better than cure!!!</h5>
-        <img src={logo} alt='logo' />
-        <input
-          type='text'
-          name='name'
-          placeholder='Enter Your Name'
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value)
-          }}
-        />
-        <input
-          type='tel'
-          name='tel'
-          maxLength='10'
-          placeholder='Enter Your Phone No'
-          value={tel}
-          onChange={(e) => {
-            setTel(e.target.value)
-          }}
-        />
-        <input
-          type='email'
-          name='email'
-          placeholder='Your Email'
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value)
-          }}
-        />
+    <>
+      <div className='mn'>
+        <ScrollTopbutton />
+        <div className='f-main'>
+          <h5>Prevention is better than cure!!!</h5>
+          <img src={logo} alt='logo' />
+          <input
+            type='text'
+            name='name'
+            placeholder='Enter Your Name'
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value)
+            }}
+          />
+          <input
+            type='tel'
+            name='tel'
+            maxLength='10'
+            placeholder='Enter Your Phone No'
+            value={tel}
+            onChange={(e) => {
+              setTel(e.target.value)
+            }}
+          />
+          <input
+            type='email'
+            name='email'
+            placeholder='Your Email'
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value)
+            }}
+          />
 
-        <label htmlFor='report'> Upload Your reports</label>
-        <input
-          type='file'
-          name='report'
-          placeholder='Your Reports'
-          className='fi'
-          onChange={() => {
-            handleFile()
-          }}
-        />
-        <div
-          className='sb'
-          onClick={() => {
-            handleClick()
-          }}
-        >
-          Submit
+          <label htmlFor='report'> Upload Your reports</label>
+          <input
+            type='file'
+            name='report'
+            placeholder='Your Reports'
+            className='fi'
+            onChange={() => {
+              handleFile()
+            }}
+          />
+
+          <div
+            className='sb'
+            onClick={() => {
+              handleClick()
+            }}
+          >
+            Submit
+          </div>
         </div>
       </div>
-    </div>
+      <Footer />
+    </>
   )
 }
 

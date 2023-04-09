@@ -9,15 +9,19 @@ import gg from '../image/glogin.png'
 import { login, glogin } from '../redux/features/userSlice'
 import { useHistory } from 'react-router'
 import ScrollTopbutton from './ScrollTopbutton'
+import Footer from './Footer'
 const Login = () => {
   const [email, setEmail] = useState('')
   const [pass, setPass] = useState('')
+  const [type, setType] = useState('')
+
   const dispatch = useDispatch()
   const history = useHistory()
   const handleSubmit = () => {
     const formValue = {
       email: email,
       password: pass,
+      type: type,
     }
     dispatch(login({ formValue, history }))
   }
@@ -48,6 +52,13 @@ const Login = () => {
     dispatch(glogin({ formValue, history }))
   }
   const onFailure = (err) => {}
+  const handleType = (typ) => {
+    setType(typ)
+    Array.from(document.getElementsByClassName('btnnn')).map((e) => {
+      return (e.style.background = '#40D06D')
+    })
+    document.getElementById(typ).style.background = 'white'
+  }
   return (
     <>
       <ScrollTopbutton />
@@ -57,6 +68,45 @@ const Login = () => {
           <div className='login'>
             <div className='p1'>
               <img src={logo} alt='logo' className='logoo' />
+              <div className='opt'>
+                <div
+                  className='btnnn'
+                  id='user'
+                  onClick={() => {
+                    handleType('user')
+                  }}
+                >
+                  User
+                </div>
+                <div
+                  className='btnnn'
+                  id='doctor'
+                  onClick={() => {
+                    handleType('doctor')
+                  }}
+                >
+                  Doctor
+                </div>
+                <div
+                  className='btnnn'
+                  id='hospital'
+                  onClick={() => {
+                    handleType('hospital')
+                  }}
+                >
+                  Hospital
+                </div>
+
+                <div
+                  className='btnnn'
+                  id='pathalogy'
+                  onClick={() => {
+                    handleType('pathalogy')
+                  }}
+                >
+                  Pathalogy
+                </div>
+              </div>
               <input
                 type='email'
                 name='email'
@@ -109,6 +159,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

@@ -1,60 +1,74 @@
-
-.about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 20px;
-
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
+.continue-button {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 60px;
+  margin-top: 60px;
+  background-color: #403e3ec8;
+  height: 50px;
+  border-radius: 10px;
+  padding: 8px 6px;
+}
+.drpdwn1 {
+  margin-bottom: 30px;
+  width: fit-content;
 
-.continue-button{
-    display: inline-flex;
-    flex-direction: row;
-    column-gap: 60px;
-    margin-top: 60px;
-    background-color: #403e3ec8; 
-    height: 50px;
-    border-radius: 10px;
-    padding: 8px 6px;
+  padding: 6px 45px;
+  border-radius: 24px;
+  background-color: #403e3ec8;
 }
-.drpdwn1{
-     margin-bottom: 30px;
-     width: 150px;
-    margin-left: 80px;
-     padding: 6px 45px;
-     border-radius: 24px;
-     background-color: #403e3ec8;
+.drpdwn2 {
+  margin-bottom: 30px;
+  width: 155px;
+  margin-left: 110px;
+  padding: 6px 45px;
+  border-radius: 24px;
+  background-color: #403e3ec8;
 }
-.drpdwn2{
-    margin-bottom: 30px;
-    width: 155px;
-    margin-left: 110px;
-    padding: 6px 45px;
-    border-radius: 24px;
-    background-color: #403e3ec8;
+.spec-bed-books {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 280px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
 }
-.spec-bed-books{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    column-gap: 280px;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
+.review {
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2c2a2a;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 20px 20px;
+  border-radius: 15px;
 }
-.review{
-    margin-top: 80px;
-    margin-left: 20px;
-    margin-right: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    background-color:  #2c2a2a;
-    align-items: center;
-    justify-content: center;
-    column-gap: 20px;
-    row-gap: 20px;
-    padding: 20px 20px;
-    border-radius: 15px;
+.specialization2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  vertical-align: middle;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  height: fit-content;
+  margin-bottom: 30px;
 }

@@ -3,6 +3,7 @@ import './DoctorDashboard.css'
 import Doctorappointmentcard from './Doctorappointmentcard'
 import ScrollTopbutton from './ScrollTopbutton'
 import doctordummy from '../image/doctordummy.jpg'
+import Footer from './Footer'
 
 const appointmentlist = [
   {
@@ -38,63 +39,67 @@ const appointmentlist = [
 function close() {
   document.getElementById('myForm').style.display = 'none'
 }
+
 function DoctorDashborad() {
   return (
-    <div className='page'>
-      <ScrollTopbutton />
-      <article className='Doctorsinfo'>
-        <img src={doctordummy} alt='' className='docimg' />
-        <div className='inf'>
-          <span className='nameofdoctor'>Dr. Rajnikanth</span>
-          <p> 9999999</p>
-          <p>MBBS, MS</p>
-          <p>Orthodontist</p>
+    <>
+      <div className='page'>
+        <ScrollTopbutton />
+        <article className='Doctorsinfo'>
+          <img src={doctordummy} alt='' className='docimg' />
+          <div className='inf'>
+            <span className='nameofdoctor'>Dr. Rajnikanth</span>
+            <p> 9999999</p>
+            <p>MBBS, MS</p>
+            <p>Orthodontist</p>
+          </div>
+        </article>
+        <button className='edit'>Edit</button>
+        <div className='line' />
+        <div className='upcomingappointments'>
+          <p className='title'>Upcoming Appointments</p>
+          <div className='titleline'></div>
+          <div className='cards'>
+            {appointmentlist.map((appointment) => (
+              <Doctorappointmentcard id={appointment.id} {...appointment} />
+            ))}
+          </div>
         </div>
-      </article>
-      <button className='edit'>Edit</button>
-      <div className='line' />
-      <div className='upcomingappointments'>
-        <p className='title'>Upcoming Appointments</p>
-        <div className='titleline'></div>
-        <div className='cards'>
-          {appointmentlist.map((appointment) => (
-            <Doctorappointmentcard id={appointment.id} {...appointment} />
-          ))}
+        <div class='form-popup' id='myForm'>
+          <form action='' class='form-container'>
+            <h1>Enter Booking Details</h1>
+
+            <label for='date'>
+              <b>Date</b>
+            </label>
+            <input type='date' placeholder='Enter Date' name='date' required />
+
+            <label for='time'>
+              <b>Time</b>
+            </label>
+            <input type='time' placeholder='Enter Time' name='time' required />
+
+            <label for='link'>
+              <b>Meet Link</b>
+            </label>
+            <input
+              type='text'
+              placeholder='Enter Google Meet Link'
+              name='link'
+              required
+            />
+
+            <button type='submit' class='btn' onClick={close}>
+              Submit
+            </button>
+            <button type='button' class='btn cancel' onClick={close}>
+              Close
+            </button>
+          </form>
         </div>
       </div>
-      <div class='form-popup' id='myForm'>
-        <form action='' class='form-container'>
-          <h1>Enter Booking Details</h1>
-
-          <label for='date'>
-            <b>Date</b>
-          </label>
-          <input type='date' placeholder='Enter Date' name='date' required />
-
-          <label for='time'>
-            <b>Time</b>
-          </label>
-          <input type='time' placeholder='Enter Time' name='time' required />
-
-          <label for='link'>
-            <b>Meet Link</b>
-          </label>
-          <input
-            type='text'
-            placeholder='Enter Google Meet Link'
-            name='link'
-            required
-          />
-
-          <button type='submit' class='btn' onClick={close}>
-            Submit
-          </button>
-          <button type='button' class='btn cancel' onClick={close}>
-            Close
-          </button>
-        </form>
-      </div>
-    </div>
+      <Footer />
+    </>
   )
 }
 

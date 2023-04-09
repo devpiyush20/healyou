@@ -1,30 +1,25 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
 import hos from '../image/hos.png'
 import './card.css'
-const Card = ({title, address}) => {
-  const history = useHistory();
-  const handleClick1=()=>{
-history.push('/services')
+const Card = ({ title, address }) => {
+  const history = useHistory()
+  const handleClick1 = () => {
+    history.push('/services')
   }
-  const handleClick2=()=>{
-    history.push('/bookbed')
-      }
+
   return (
-    <>
-    <div className="card">
-        <img src={hos} alt="" />
-        <div className="content">
+    <div className='cardcontainer'>
+      <button className='card' onClick={handleClick1}>
+        <div>
+          <img src={hos} alt='' />
+          <div className='content'>
             <h2>{title}</h2>
-            <p>{address}
-            </p>
-            <div className="btns">
-                <div className="btn" onClick={()=>{handleClick2()}}>Book Bed</div>
-                <div className="btn" onClick={()=>{handleClick1()}}>View More</div>
-            </div>
+            <p>{address}</p>
+          </div>
         </div>
+      </button>
     </div>
-    </>
   )
 }
 

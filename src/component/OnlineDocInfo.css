@@ -1,0 +1,61 @@
+.Name {
+  font-size: 50px;
+  font-weight: bold;
+}
+.details {
+  font-size: 20px;
+}
+.topintro {
+  background-color: rgb(25, 66, 66);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: fit-content;
+  align-self: center;
+}
+.review {
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2c2a2a;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 20px 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.main_page {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.imagendintro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.docimg2 {
+  border-radius: 50%;
+  height: 270px;
+}
+.BBB {
+  border: none;
+  padding: 4px 10px;
+  font-size: 30px;
+  background-color: #40d06d;
+  border-radius: 20px;
+  color: white;
+}

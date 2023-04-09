@@ -2,7 +2,7 @@
     display: inline-flex;
     flex-wrap: wrap;
     column-gap: 50px;
-    row-gap: 20px;
+    row-gap: 10px;
     justify-content: center;
     align-items: center;
     padding: 15px;
@@ -10,10 +10,11 @@
     border-radius: 10px;
     text-align: justify;
 }
+
 .info{
     display: inline-flex;
     flex-wrap: wrap;
-    column-gap: 25px;
+    column-gap: 15px;
     row-gap: 5px;
 }
 .upc{
@@ -40,4 +41,24 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+.rwbb{
+    display: none;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color:  rgba(68, 68, 68, 0.977);
+    padding: 20px;
+    border-radius: 25px;
+    
+    position: fixed;
+    margin-top: -100px;
+
+}
+.rwbb textarea{
+    background-color:  rgba(217, 217, 217, 0.1);
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
 }

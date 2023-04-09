@@ -5,6 +5,7 @@ import logo from '../image/logoo.png'
 import cross from '../image/cross.jpg'
 import add from '../image/add.jpg'
 import addf from '../image/addfile.png'
+import { toast } from 'react-toastify'
 import ScrollTopbutton from './ScrollTopbutton'
 
 import { useDispatch } from 'react-redux'
@@ -29,6 +30,7 @@ const Register = () => {
   const dispatch = useDispatch()
   const history = useHistory()
   const handleSubmit = () => {
+    console.log(pass, cpass)
     if (pass === cpass) {
       const formValue = {
         name: name,
@@ -60,12 +62,15 @@ const Register = () => {
   }
   const imageUploaded = (tp) => {
     var file
+    console.log(tp)
     if (tp === 'file') {
       file = document.querySelector('input[type=file]')['files'][0]
+      document.getElementById('f1').style.border = '2px solid white'
     } else {
-      file = document.querySelector('input[type=file]')['files'][1]
+      document.getElementById('f2').style.border = '2px solid white'
+      console.log(document.querySelector('input[type=file]')['files'][0])
+      file = document.querySelector('input[type=file]')['files'][0]
     }
-    document.getElementById('uf').style.border = '2px solid white'
 
     var reader = new FileReader()
 
@@ -98,12 +103,14 @@ const Register = () => {
       document.getElementById('uss').style.display = 'flex'
       document.getElementById('dc').style.display = 'none'
       document.getElementById('hadrs').style.display = 'none'
+      document.getElementById('db').style.display = 'block'
     }
     if (typ === 'doctor') {
       document.getElementById('uss').style.display = 'flex'
       document.getElementById('db').style.display = 'none'
       document.getElementById('dc').style.display = 'flex'
       document.getElementById('hadrs').style.display = 'none'
+      document.getElementById('spi').style.display = 'flex'
     }
     if (typ === 'hospital' || typ === 'pathalogy') {
       document.getElementById('uss').style.display = 'flex'
@@ -113,11 +120,12 @@ const Register = () => {
       document.getElementById('hadrs').style.display = 'inline-block'
     }
     setType(typ)
-    Array.from(document.getElementsByClassName('btnnn')).map((e) => {
+    Array.from(document.getElementsByClassName('btn')).map((e) => {
       return (e.style.background = '#40D06D')
     })
     document.getElementById(typ).style.background = 'white'
   }
+
   return (
     <>
       <ScrollTopbutton />
@@ -129,7 +137,7 @@ const Register = () => {
           </div>
           <div className='opt'>
             <div
-              className='btnnn'
+              className='btn'
               id='user'
               onClick={() => {
                 handleType('user')
@@ -138,7 +146,7 @@ const Register = () => {
               User
             </div>
             <div
-              className='btnnn'
+              className='btn'
               id='doctor'
               onClick={() => {
                 handleType('doctor')
@@ -147,7 +155,7 @@ const Register = () => {
               Doctor
             </div>
             <div
-              className='btnnn'
+              className='btn'
               id='hospital'
               onClick={() => {
                 handleType('hospital')
@@ -157,7 +165,7 @@ const Register = () => {
             </div>
 
             <div
-              className='btnnn'
+              className='btn'
               id='pathalogy'
               onClick={() => {
                 handleType('pathalogy')
@@ -171,7 +179,9 @@ const Register = () => {
               type='text'
               name='name'
               className='nm'
+              required
               placeholder='Name'
+              maxLength={40}
               value={name}
               onChange={(e) => {
                 setName(e.target.value)
@@ -181,19 +191,41 @@ const Register = () => {
             <input
               type='email'
               name='email'
+              required
               placeholder='Email'
               value={email}
               onChange={(e) => {
-                setEmail(e.target.value)
+                if (name.length === 0) {
+                  toast.error('Name is a required field!')
+                } else {
+                  setEmail(e.target.value)
+                }
               }}
             />
             <input
               type='tel'
-              name='tel'
-              placeholder='10 digit number'
+              name='phoneNumber'
+              id='phoneNumber'
+              title='Please use a 10 digit telephone number with no dashes or dots'
+              placeholder='Please Enter a valid Contact Number'
+              pattern='[0-9]{10}'
+              required
+              maxLength={10}
               value={tel}
               onChange={(e) => {
-                setTel(e.target.value)
+                if (
+                  email.indexOf('@gmail.com') > 1 ||
+                  email.indexOf('@outlook.com') > 1 ||
+                  email.indexOf('@yahoo.com') > 1
+                ) {
+                  setTel(e.target.value)
+                } else {
+                  if (email.length === 0) {
+                    toast.error('Email is a required feild')
+                  } else {
+                    toast.error('Invalid Email')
+                  }
+                }
               }}
             />
             <input
@@ -201,27 +233,70 @@ const Register = () => {
               name='dob'
               id='db'
               placeholder='DOB (dd/mm/yyyy)'
+              title='Please fill the DOB in DD/MM/YYYY Format'
+              required
+              maxLength={10}
               value={dob}
               onChange={(e) => {
-                setDob(e.target.value)
+                if (tel.length < 10) {
+                  if (tel.length === 0) {
+                    toast.error('Contact Information Cannot Be Empty')
+                  } else {
+                    toast.error('Please Enter Correct Number')
+                  }
+                } else {
+                  setDob(e.target.value)
+                }
               }}
             />
             <input
               type='password'
               name='pass'
               placeholder='Enter Password'
+              title='Passwords must be greater than or equal to 8 characters'
               value={pass}
               onChange={(e) => {
-                setPass(e.target.value)
+                if (
+                  type === 'user' &&
+                  (dob.indexOf('/') < 2 || dob.length < 10)
+                ) {
+                  console.log(type)
+                  if (dob.length === 0) {
+                    toast.error('Date Of Birth is a required feild')
+                  } else {
+                    toast.error('Invalid Date Of Birth')
+                  }
+                } else {
+                  setPass(e.target.value)
+                }
               }}
             />
             <input
               type='password'
               name='cpass'
               placeholder='Confirm Password'
+              required
               value={cpass}
               onChange={(e) => {
-                setCpass(e.target.value)
+                if (pass.length < 8) {
+                  if (pass.length === 0) {
+                    toast.error('Passwords must not be empty')
+                  } else {
+                    toast.error(
+                      'Password length must be greater than 8 characters'
+                    )
+                  }
+                } else {
+                  setCpass(e.target.value)
+                  if (pass.length > 1) {
+                    if (
+                      cpass.length === pass.length &&
+                      e.target.value !== pass
+                    ) {
+                      toast.error('Passwords Do Not Match')
+                    }
+                  }
+                }
               }}
             />
           </div>
@@ -230,6 +305,7 @@ const Register = () => {
               type='text'
               name='haddrs'
               id='hadrs'
+              required
               placeholder='Full Address'
               value={hadrs}
               onChange={(e) => {
@@ -241,6 +317,7 @@ const Register = () => {
                 <input
                   type='text'
                   name='qual'
+                  required
                   placeholder='Qualification'
                   value={qual}
                   onChange={(e) => {
@@ -272,6 +349,7 @@ const Register = () => {
                 <input
                   type='text'
                   name='spec'
+                  required
                   placeholder='Speciality'
                   value={spec}
                   onChange={(e) => {
@@ -301,7 +379,7 @@ const Register = () => {
               </div>
             </div>
 
-            <div className='uf' id='uf'>
+            <div className='uf' id='f1'>
               <img src={addf} alt='' className='add' />
               <span>Upload Certificates</span>
             </div>
@@ -309,18 +387,20 @@ const Register = () => {
               type='file'
               name='adhar'
               className='fi'
+              required
               id='fi'
               onChange={() => {
                 imageUploaded('file')
               }}
             />
-            <div className='uf' id='uf'>
+            <div className='uf ' id='f2'>
               <img src={addf} alt='' className='add' />
               <span>Upload Image</span>
             </div>
             <input
               type='file'
               name='adhar'
+              required
               className='fi'
               id='fi'
               onChange={() => {

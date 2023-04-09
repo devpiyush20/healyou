@@ -1,17 +1,77 @@
-.d-main{
-    display: inline-flex;
-    flex-wrap: wrap;
-    column-gap: 50px;
-    row-gap: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 5;
+.onlinedoctormain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
 }
-.f-main{
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 50px;
-    row-gap: 20px;
-    justify-content: center;
-    align-items: center;
+
+.f-mains {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 20px;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+  padding: 10px;
+  background-color: rgba(217, 217, 217, 0.1);
+  border-radius: 20px;
+  margin-top: 100px;
+}
+.top_banner {
+  justify-content: center;
+  display: flex;
+  height: 70px;
+  margin-top: 9px;
+  column-gap: 20px;
+  flex-wrap: wrap;
+}
+.d_info {
+  margin-top: 9px;
+  display: flex;
+  background: #40d06d;
+  width: 400px;
+  justify-content: center;
+  border-radius: 25px;
+  height: 50px;
+  font-size: large;
+  padding-top: 7px;
+}
+.specialization {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: middle;
+  column-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  height: fit-content;
+}
+.options {
+  display: flex;
+  flex-direction: row;
+  column-gap: 15px;
+  margin: 10px;
+}
+.specializationinput {
+  border: none;
+  border-radius: 20px;
+  padding: 3px;
+  width: 210px;
+}
+/* .dropDown{
+    height: 30px;
+    width: 30px;
+    margin-top: -2px;
+} */
+
+.input {
+  height: 30px;
+  width: 20px;
 }

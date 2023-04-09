@@ -6,6 +6,7 @@ import './services.css'
 import DocCard from './DocCard'
 import BedCard from './BedCard'
 import ScrollTopbutton from './ScrollTopbutton'
+import Footer from './Footer'
 
 const Services = () => {
   const reviews = [
@@ -125,7 +126,7 @@ const Services = () => {
       </div>
 
       <div className='spec-bed-books'>
-        <div className='specialization'>
+        <div className='specialization2'>
           <div className='drpdwn1'>Doctors</div>
           {docData.map((e) => {
             return (
@@ -150,6 +151,7 @@ const Services = () => {
           })}
         </div>
       </div>
+      <Footer />
     </>
   )
 }
